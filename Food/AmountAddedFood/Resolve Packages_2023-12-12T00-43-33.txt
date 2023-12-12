@@ -1,0 +1,63 @@
+
+Showing Recent Messages
+the package manifest at '/Package.swift' cannot be accessed (/Package.swift doesn't exist in file system)
+
+
+firebase-ios-sdk
+
+Updating from https://github.com/firebase/firebase-ios-sdk
+
+swift-protobuf
+
+Updating from https://github.com/apple/swift-protobuf.git
+
+interop-ios-for-google-sdks
+
+Updating from https://github.com/google/interop-ios-for-google-sdks.git
+
+promises
+
+Updating from https://github.com/google/promises.git
+
+GoogleDataTransport
+
+Updating from https://github.com/google/GoogleDataTransport.git
+
+gtm-session-fetcher
+
+Updating from https://github.com/google/gtm-session-fetcher.git
+
+nanopb
+
+Updating from https://github.com/firebase/nanopb.git
+
+grpc-binary
+
+Updating from https://github.com/google/grpc-binary.git
+
+abseil-cpp-binary
+
+Updating from https://github.com/google/abseil-cpp-binary.git
+
+GoogleUtilities
+
+Updating from https://github.com/google/GoogleUtilities.git
+
+GoogleAppMeasurement
+
+Updating from https://github.com/google/GoogleAppMeasurement.git
+
+leveldb
+
+Updating from https://github.com/firebase/leveldb.git
+
+app-check
+
+Updating from https://github.com/google/app-check.git
+
+DropDown
+
+Updating from https://github.com/AssistoLab/DropDown
+
+
+Resolving Package Graph Failed    12.12.2023, 00:43    5.5 seconds

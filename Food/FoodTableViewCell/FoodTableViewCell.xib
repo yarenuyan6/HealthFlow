@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RedHatDisplay-Regular.otf">
+            <string>RedHatDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="126" id="pfd-Hs-wlK" customClass="FoodTableViewCell" customModule="HealthFlow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="126"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pfd-Hs-wlK" id="LmJ-7i-R7G">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="126"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dZ-Qq-xkg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="126"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JG7-Ku-T9V">
+                                <rect key="frame" x="12" y="12" width="369" height="102"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qNE-84-oSw">
+                                        <rect key="frame" x="0.0" y="0.0" width="369" height="83.333333333333329"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redApple" translatesAutoresizingMaskIntoConstraints="NO" id="2T9-4G-KZ9">
+                                                <rect key="frame" x="0.0" y="21.666666666666664" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="333-FK-mga"/>
+                                                    <constraint firstAttribute="width" constant="40" id="PSL-fB-sen"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ey-Rk-zsl">
+                                                <rect key="frame" x="40" y="30.333333333333336" width="304" height="22.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="17"/>
+                                                <color key="textColor" name="blackOwn"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plusCirclepng" translatesAutoresizingMaskIntoConstraints="NO" id="IY9-UT-l3H">
+                                                <rect key="frame" x="344" y="29.333333333333336" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="9Ab-kY-w6R"/>
+                                                    <constraint firstAttribute="width" constant="25" id="Rgd-iq-elU"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ajh-P8-Qza">
+                                        <rect key="frame" x="0.0" y="83.333333333333329" width="369" height="18.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5M-hk-Jkh">
+                                                <rect key="frame" x="4" y="0.0" width="361" height="18.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="4" bottom="0.0" right="4"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <edgeInsets key="layoutMargins" top="12" left="12" bottom="12" right="12"/>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8dZ-Qq-xkg" firstAttribute="top" secondItem="LmJ-7i-R7G" secondAttribute="top" id="9cY-JF-bfl"/>
+                    <constraint firstItem="8dZ-Qq-xkg" firstAttribute="leading" secondItem="LmJ-7i-R7G" secondAttribute="leading" id="CVL-qv-tPU"/>
+                    <constraint firstAttribute="trailing" secondItem="8dZ-Qq-xkg" secondAttribute="trailing" id="lSG-sa-1XH"/>
+                    <constraint firstAttribute="bottom" secondItem="8dZ-Qq-xkg" secondAttribute="bottom" id="oIV-XI-K2h"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="foodNameLabel" destination="7ey-Rk-zsl" id="xyH-hH-MX2"/>
+                <outlet property="nutritionFactsLabel" destination="W5M-hk-Jkh" id="Ajp-SV-Uxa"/>
+                <outlet property="plusImageView" destination="IY9-UT-l3H" id="qW9-un-DA7"/>
+            </connections>
+            <point key="canvasLocation" x="-445.03816793893128" y="-313.38028169014086"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="plusCirclepng" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="redApple" width="204" height="204"/>
+        <namedColor name="blackOwn">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

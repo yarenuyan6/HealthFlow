@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RedHatDisplay-Medium.otf">
+            <string>RedHatDisplay-Medium</string>
+        </array>
+        <array key="RedHatDisplay-Regular.otf">
+            <string>RedHatDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--FoodVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="FoodVC" id="Y6W-OH-hqX" customClass="FoodVC" customModule="HealthFlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Eg-yC-0sk">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6zp-39-5L7">
+                                        <rect key="frame" x="16" y="60" width="361" height="732"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="33U-Ql-RqO">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="30"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8vU-eu-w4H">
+                                                        <rect key="frame" x="0.0" y="0.0" width="331" height="30"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="goBackArrow" translatesAutoresizingMaskIntoConstraints="NO" id="eDF-hh-fDB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="KJW-oN-aVq"/>
+                                                                    <constraint firstAttribute="width" constant="30" id="yd1-WU-FyF"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Calories Consumed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kE-7k-E1U">
+                                                                <rect key="frame" x="30" y="3.6666666666666643" width="301" height="22.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="17"/>
+                                                                <color key="textColor" name="blackOwn"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="3kE-7k-E1U" firstAttribute="centerX" secondItem="33U-Ql-RqO" secondAttribute="centerX" id="LKr-hU-Ay3"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="aQh-7T-e2d">
+                                                <rect key="frame" x="0.0" y="50" width="361" height="60"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rwT-kz-9ly">
+                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="60"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ep1-xC-zZT">
+                                                                <rect key="frame" x="20" y="0.0" width="321" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4M-bI-ORH">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="60" id="1id-rR-HmA"/>
+                                                                            <constraint firstAttribute="height" constant="20" id="Lae-HN-uHS"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="17"/>
+                                                                        <color key="textColor" name="blackOwn"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <progressView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aeW-1Q-KpC">
+                                                                        <rect key="frame" x="80" y="8" width="241" height="4"/>
+                                                                        <color key="tintColor" name="celticBlue"/>
+                                                                        <color key="progressTintColor" name="celticBlue"/>
+                                                                        <color key="trackTintColor" name="americanSilver"/>
+                                                                    </progressView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b3L-Kz-cbA">
+                                                                <rect key="frame" x="20" y="20" width="321" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s85-Cj-mEk">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="60" id="DGU-s9-XyI"/>
+                                                                            <constraint firstAttribute="height" constant="20" id="jIG-Cr-BeI"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="17"/>
+                                                                        <color key="textColor" name="blackOwn"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <progressView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="rf4-bp-Hdx">
+                                                                        <rect key="frame" x="80" y="8" width="241" height="4"/>
+                                                                        <color key="tintColor" name="celticBlue"/>
+                                                                        <color key="progressTintColor" name="celticBlue"/>
+                                                                        <color key="trackTintColor" name="americanSilver"/>
+                                                                    </progressView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XHn-Bi-SMm">
+                                                                <rect key="frame" x="20" y="40" width="321" height="20"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybF-Zs-pZN">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="20" id="CZ3-2p-nZK"/>
+                                                                            <constraint firstAttribute="width" constant="60" id="Dvh-PU-syc"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="17"/>
+                                                                        <color key="textColor" name="blackOwn"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <progressView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="wtE-4G-gXP">
+                                                                        <rect key="frame" x="80" y="8" width="241" height="4"/>
+                                                                        <color key="tintColor" name="celticBlue"/>
+                                                                        <color key="progressTintColor" name="celticBlue"/>
+                                                                        <color key="trackTintColor" name="americanSilver"/>
+                                                                    </progressView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="0.0" left="20" bottom="0.0" right="20"/>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cUT-CT-U58">
+                                                <rect key="frame" x="0.0" y="130" width="361" height="547.66666666666663"/>
+                                                <subviews>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uTV-6R-QC9">
+                                                        <rect key="frame" x="8" y="8" width="345" height="41"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="d60-7C-H5g"/>
+                                                        </constraints>
+                                                        <segments>
+                                                            <segment title="Breakfast"/>
+                                                            <segment title="Lunch"/>
+                                                            <segment title="Dinner"/>
+                                                            <segment title="Snack"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kSF-Ec-sz1">
+                                                        <rect key="frame" x="8" y="48.000000000000028" width="345" height="491.66666666666674"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </tableView>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="YWt-KA-K31">
+                                                <rect key="frame" x="0.0" y="697.66666666666663" width="361" height="34.333333333333371"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JzO-cM-lFV">
+                                                        <rect key="frame" x="246" y="0.0" width="115" height="34.333333333333336"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbN-lG-VYn">
+                                                                <rect key="frame" x="0.0" y="0.0" width="107" height="34.333333333333336"/>
+                                                                <color key="backgroundColor" name="celticBlue"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="34.329999999999998" id="0Jb-lC-xz7"/>
+                                                                </constraints>
+                                                                <color key="tintColor" name="whiteOwn"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Add Food"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="6"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="addFoodButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6Pz-NH-iPv"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="115" id="1JF-ZA-nDQ"/>
+                                                        </constraints>
+                                                        <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="8"/>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="60" left="16" bottom="60" right="16"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Eg-yC-0sk" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Ciz-I5-qjE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1Eg-yC-0sk" secondAttribute="trailing" id="Jju-jT-tF9"/>
+                            <constraint firstAttribute="bottom" secondItem="1Eg-yC-0sk" secondAttribute="bottom" id="MkG-gC-1wq"/>
+                            <constraint firstItem="1Eg-yC-0sk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="lLn-cN-8WK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="carbsProgressView" destination="aeW-1Q-KpC" id="WKy-vZ-6hr"/>
+                        <outlet property="fatProgressView" destination="rf4-bp-Hdx" id="FkH-iT-h0Y"/>
+                        <outlet property="foodTableView" destination="kSF-Ec-sz1" id="zdE-yo-5iT"/>
+                        <outlet property="goBackView" destination="eDF-hh-fDB" id="z7b-OE-ogz"/>
+                        <outlet property="proteinProgressView" destination="wtE-4G-gXP" id="tHG-zO-Zzd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="goBackArrow" width="85.333335876464844" height="85.333335876464844"/>
+        <namedColor name="americanSilver">
+            <color red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="blackOwn">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="celticBlue">
+            <color red="0.19215686274509805" green="0.39215686274509803" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteOwn">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

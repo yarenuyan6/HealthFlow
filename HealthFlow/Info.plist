@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>RedHatDisplay-Black.otf</string>
+		<string>RedHatDisplay-BlackItalic.otf</string>
+		<string>RedHatDisplay-Bold.otf</string>
+		<string>RedHatDisplay-BoldItalic.otf</string>
+		<string>RedHatDisplay-Italic.otf</string>
+		<string>RedHatDisplay-Medium.otf</string>
+		<string>RedHatDisplay-MediumItalic.otf</string>
+		<string>RedHatDisplay-Regular.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

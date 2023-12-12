@@ -6,14 +6,25 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseCore
+import FirebaseAuth
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    var window:UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainVC")
+        let navigationController = UINavigationController(rootViewController: mainVC)
+        
+//        let onboardingVC = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(withIdentifier: "OnboardingVC")
+//        let navigationController = UINavigationController(rootViewController: onboardingVC)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
+        FirebaseApp.configure()
         return true
     }
 
@@ -31,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    
 
 }
 
