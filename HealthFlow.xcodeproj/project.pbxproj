@@ -57,7 +57,7 @@
 		AD84B14E2B27F704004F9BF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD84B14D2B27F704004F9BF1 /* GoogleService-Info.plist */; };
 		AD9B52F92B22762100E832B2 /* AmountAddedFood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9B52F82B22762100E832B2 /* AmountAddedFood.storyboard */; };
 		AD9B52FB2B23503F00E832B2 /* AmountAddedFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9B52FA2B23503F00E832B2 /* AmountAddedFoodVC.swift */; };
-		AD9B52FD2B2364CA00E832B2 /* AmountFoodVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9B52FC2B2364CA00E832B2 /* AmountFoodVM.swift */; };
+		AD9B52FD2B2364CA00E832B2 /* AmountAddedFoodVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9B52FC2B2364CA00E832B2 /* AmountAddedFoodVM.swift */; };
 		ADA256362B0156DB003BB7D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA256352B0156DB003BB7D1 /* AppDelegate.swift */; };
 		ADA256382B0156DB003BB7D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA256372B0156DB003BB7D1 /* SceneDelegate.swift */; };
 		ADA2563A2B0156DB003BB7D1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA256392B0156DB003BB7D1 /* MainVC.swift */; };
@@ -80,6 +80,18 @@
 		ADDF39F62B286DE200F3D7F8 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF39F52B286DE200F3D7F8 /* FirebaseMessaging */; };
 		ADDF39F82B286DE200F3D7F8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF39F72B286DE200F3D7F8 /* FirebaseStorage */; };
 		ADDF39FA2B286DE200F3D7F8 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF39F92B286DE200F3D7F8 /* FirebaseStorageCombine-Community */; };
+		ADDF39FD2B292A4300F3D7F8 /* iOSDropDown in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF39FC2B292A4300F3D7F8 /* iOSDropDown */; };
+		ADDF3A022B2BDD7300F3D7F8 /* EditHeightWeight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADDF3A012B2BDD7300F3D7F8 /* EditHeightWeight.storyboard */; };
+		ADDF3A042B2BDD9100F3D7F8 /* EditHeightWeightVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF3A032B2BDD9100F3D7F8 /* EditHeightWeightVC.swift */; };
+		ADDF3A062B2D28D000F3D7F8 /* EditHeightWeightVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF3A052B2D28D000F3D7F8 /* EditHeightWeightVM.swift */; };
+		ADDF3A092B2D457A00F3D7F8 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADDF3A082B2D457A00F3D7F8 /* Profile.storyboard */; };
+		ADDF3A0B2B2D473C00F3D7F8 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF3A0A2B2D473C00F3D7F8 /* ProfileVC.swift */; };
+		ADDF3A0D2B2D476300F3D7F8 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF3A0C2B2D476300F3D7F8 /* ProfileVM.swift */; };
+		ADDF3A0F2B2E694400F3D7F8 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF3A0E2B2E694400F3D7F8 /* LoadingOverlay.swift */; };
+		ADDF3A122B302D9900F3D7F8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF3A112B302D9900F3D7F8 /* Alamofire */; };
+		ADDF3A152B30311100F3D7F8 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF3A142B30311100F3D7F8 /* AlamofireImage */; };
+		ADDF3A182B3174DB00F3D7F8 /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF3A172B3174DB00F3D7F8 /* Down */; };
+		ADDF3A1A2B318B6800F3D7F8 /* MeasureUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF3A192B318B6800F3D7F8 /* MeasureUnits.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,7 +162,7 @@
 		AD84B14D2B27F704004F9BF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD9B52F82B22762100E832B2 /* AmountAddedFood.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AmountAddedFood.storyboard; sourceTree = "<group>"; };
 		AD9B52FA2B23503F00E832B2 /* AmountAddedFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountAddedFoodVC.swift; sourceTree = "<group>"; };
-		AD9B52FC2B2364CA00E832B2 /* AmountFoodVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountFoodVM.swift; sourceTree = "<group>"; };
+		AD9B52FC2B2364CA00E832B2 /* AmountAddedFoodVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountAddedFoodVM.swift; sourceTree = "<group>"; };
 		ADA256322B0156DB003BB7D1 /* HealthFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA256352B0156DB003BB7D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADA256372B0156DB003BB7D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +179,14 @@
 		ADB8CAA82B0903DF00EC9039 /* RegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
 		ADB8CAAA2B090E5800EC9039 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		ADB8CAAC2B091C4000EC9039 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		ADDF3A012B2BDD7300F3D7F8 /* EditHeightWeight.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditHeightWeight.storyboard; sourceTree = "<group>"; };
+		ADDF3A032B2BDD9100F3D7F8 /* EditHeightWeightVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHeightWeightVC.swift; sourceTree = "<group>"; };
+		ADDF3A052B2D28D000F3D7F8 /* EditHeightWeightVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHeightWeightVM.swift; sourceTree = "<group>"; };
+		ADDF3A082B2D457A00F3D7F8 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		ADDF3A0A2B2D473C00F3D7F8 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		ADDF3A0C2B2D476300F3D7F8 /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
+		ADDF3A0E2B2E694400F3D7F8 /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
+		ADDF3A192B318B6800F3D7F8 /* MeasureUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureUnits.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,14 +194,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADDF3A152B30311100F3D7F8 /* AlamofireImage in Frameworks */,
 				ADDF39F62B286DE200F3D7F8 /* FirebaseMessaging in Frameworks */,
 				ADDF39EE2B286DE200F3D7F8 /* FirebaseDatabaseSwift in Frameworks */,
 				ADDF39FA2B286DE200F3D7F8 /* FirebaseStorageCombine-Community in Frameworks */,
 				ADDF39F82B286DE200F3D7F8 /* FirebaseStorage in Frameworks */,
+				ADDF39FD2B292A4300F3D7F8 /* iOSDropDown in Frameworks */,
+				ADDF3A182B3174DB00F3D7F8 /* Down in Frameworks */,
 				ADDF39EC2B286DE200F3D7F8 /* FirebaseDatabase in Frameworks */,
 				ADDF39E82B286DE200F3D7F8 /* FirebaseAuth in Frameworks */,
 				ADDF39F42B286DE200F3D7F8 /* FirebaseFirestoreSwift in Frameworks */,
 				ADDF39F22B286DE200F3D7F8 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				ADDF3A122B302D9900F3D7F8 /* Alamofire in Frameworks */,
 				ADDF39F02B286DE200F3D7F8 /* FirebaseFirestore in Frameworks */,
 				ADDF39EA2B286DE200F3D7F8 /* FirebaseAuthCombine-Community in Frameworks */,
 			);
@@ -223,6 +247,8 @@
 				AD09EC462B17325C00471E4A /* FoodVC.swift */,
 				AD09EC4E2B19D9C600471E4A /* FoodModel.swift */,
 				AD09EC502B19DB4E00471E4A /* FoodVM.swift */,
+				ADDF3A0E2B2E694400F3D7F8 /* LoadingOverlay.swift */,
+				ADDF3A192B318B6800F3D7F8 /* MeasureUnits.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -277,6 +303,8 @@
 		AD0C988B2B02486400CB923D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				ADDF39FE2B2BDD1700F3D7F8 /* EditHeightWeight */,
+				AD09EC3E2B1624DC00471E4A /* Food */,
 				AD09EC3A2B1486D600471E4A /* MainVM.swift */,
 				ADA256392B0156DB003BB7D1 /* MainVC.swift */,
 				ADA2563B2B0156DB003BB7D1 /* Main.storyboard */,
@@ -352,7 +380,7 @@
 			children = (
 				AD9B52F82B22762100E832B2 /* AmountAddedFood.storyboard */,
 				AD9B52FA2B23503F00E832B2 /* AmountAddedFoodVC.swift */,
-				AD9B52FC2B2364CA00E832B2 /* AmountFoodVM.swift */,
+				AD9B52FC2B2364CA00E832B2 /* AmountAddedFoodVM.swift */,
 			);
 			path = AmountAddedFood;
 			sourceTree = "<group>";
@@ -360,8 +388,8 @@
 		ADA256292B0156DA003BB7D1 = {
 			isa = PBXGroup;
 			children = (
+				ADDF3A072B2D456D00F3D7F8 /* Profile */,
 				AD09EC4D2B18C27300471E4A /* Fonts */,
-				AD09EC3E2B1624DC00471E4A /* Food */,
 				AD09EC152B0B580E00471E4A /* Helpers */,
 				AD0C989D2B03AA5B00CB923D /* PersonalDetails */,
 				AD0C98962B039CB300CB923D /* Register */,
@@ -429,6 +457,26 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		ADDF39FE2B2BDD1700F3D7F8 /* EditHeightWeight */ = {
+			isa = PBXGroup;
+			children = (
+				ADDF3A012B2BDD7300F3D7F8 /* EditHeightWeight.storyboard */,
+				ADDF3A032B2BDD9100F3D7F8 /* EditHeightWeightVC.swift */,
+				ADDF3A052B2D28D000F3D7F8 /* EditHeightWeightVM.swift */,
+			);
+			path = EditHeightWeight;
+			sourceTree = "<group>";
+		};
+		ADDF3A072B2D456D00F3D7F8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				ADDF3A082B2D457A00F3D7F8 /* Profile.storyboard */,
+				ADDF3A0A2B2D473C00F3D7F8 /* ProfileVC.swift */,
+				ADDF3A0C2B2D476300F3D7F8 /* ProfileVM.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -456,6 +504,10 @@
 				ADDF39F52B286DE200F3D7F8 /* FirebaseMessaging */,
 				ADDF39F72B286DE200F3D7F8 /* FirebaseStorage */,
 				ADDF39F92B286DE200F3D7F8 /* FirebaseStorageCombine-Community */,
+				ADDF39FC2B292A4300F3D7F8 /* iOSDropDown */,
+				ADDF3A112B302D9900F3D7F8 /* Alamofire */,
+				ADDF3A142B30311100F3D7F8 /* AlamofireImage */,
+				ADDF3A172B3174DB00F3D7F8 /* Down */,
 			);
 			productName = HealthFlow;
 			productReference = ADA256322B0156DB003BB7D1 /* HealthFlow.app */;
@@ -531,6 +583,10 @@
 			mainGroup = ADA256292B0156DA003BB7D1;
 			packageReferences = (
 				ADDF39E62B286DE200F3D7F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				ADDF39FB2B292A4300F3D7F8 /* XCRemoteSwiftPackageReference "iOSDropDown" */,
+				ADDF3A102B302D9900F3D7F8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				ADDF3A132B30311100F3D7F8 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				ADDF3A162B3174DB00F3D7F8 /* XCRemoteSwiftPackageReference "Down" */,
 			);
 			productRefGroup = ADA256332B0156DB003BB7D1 /* Products */;
 			projectDirPath = "";
@@ -551,6 +607,7 @@
 				AD0C987F2B02066100CB923D /* Colors.xcassets in Resources */,
 				AD51BB462B078AD600C128C5 /* RedHatText-MediumItalic.otf in Resources */,
 				AD51BB172B0750B200C128C5 /* Images.xcassets in Resources */,
+				ADDF3A092B2D457A00F3D7F8 /* Profile.storyboard in Resources */,
 				AD0C989F2B03AA7500CB923D /* PersonalDetails.storyboard in Resources */,
 				AD84B14E2B27F704004F9BF1 /* GoogleService-Info.plist in Resources */,
 				AD51BB422B078AD600C128C5 /* RedHatText-BoldItalic.otf in Resources */,
@@ -575,6 +632,7 @@
 				ADA2563D2B0156DB003BB7D1 /* Main.storyboard in Resources */,
 				AD9B52F92B22762100E832B2 /* AmountAddedFood.storyboard in Resources */,
 				AD51BB382B078AD600C128C5 /* RedHatText-Bold.otf in Resources */,
+				ADDF3A022B2BDD7300F3D7F8 /* EditHeightWeight.storyboard in Resources */,
 				AD51BB3A2B078AD600C128C5 /* RedHatText-Italic.otf in Resources */,
 				AD0C98982B039CC200CB923D /* Register.storyboard in Resources */,
 			);
@@ -606,7 +664,8 @@
 				ADB8CAA72B09020A00EC9039 /* UserModel.swift in Sources */,
 				AD09EC3D2B14A88D00471E4A /* LoginModel.swift in Sources */,
 				AD819D772B1DAEE4000CD5F3 /* AddFoodVC.swift in Sources */,
-				AD9B52FD2B2364CA00E832B2 /* AmountFoodVM.swift in Sources */,
+				ADDF3A0D2B2D476300F3D7F8 /* ProfileVM.swift in Sources */,
+				AD9B52FD2B2364CA00E832B2 /* AmountAddedFoodVM.swift in Sources */,
 				ADB8CAA92B0903DF00EC9039 /* RegisterVM.swift in Sources */,
 				ADA2563A2B0156DB003BB7D1 /* MainVC.swift in Sources */,
 				AD0C98A12B03AB9B00CB923D /* PersonalDetailsVC.swift in Sources */,
@@ -620,18 +679,23 @@
 				AD0C98952B035EF900CB923D /* UnderlinedLabel.swift in Sources */,
 				AD09EC512B19DB4E00471E4A /* FoodVM.swift in Sources */,
 				AD51BB152B0746CB00C128C5 /* ProfileDetailsVM.swift in Sources */,
+				ADDF3A042B2BDD9100F3D7F8 /* EditHeightWeightVC.swift in Sources */,
 				AD819D792B1DBDE1000CD5F3 /* AddFoodVM.swift in Sources */,
 				AD09EC172B0B583600471E4A /* DeviceUtils.swift in Sources */,
 				AD0C988D2B02488000CB923D /* OnboardingVC.swift in Sources */,
 				ADA256362B0156DB003BB7D1 /* AppDelegate.swift in Sources */,
 				AD0C98A32B04D75E00CB923D /* CustomDatePicker.swift in Sources */,
+				ADDF3A062B2D28D000F3D7F8 /* EditHeightWeightVM.swift in Sources */,
 				ADB8CAAB2B090E5800EC9039 /* CustomButton.swift in Sources */,
 				ADB8CAAD2B091C4000EC9039 /* LoginVM.swift in Sources */,
 				AD0C98932B03511900CB923D /* GradientView.swift in Sources */,
 				ADA256382B0156DB003BB7D1 /* SceneDelegate.swift in Sources */,
+				ADDF3A0B2B2D473C00F3D7F8 /* ProfileVC.swift in Sources */,
 				AD09EC4F2B19D9C600471E4A /* FoodModel.swift in Sources */,
 				AD0C989C2B039F4E00CB923D /* RegisterVC.swift in Sources */,
+				ADDF3A1A2B318B6800F3D7F8 /* MeasureUnits.swift in Sources */,
 				AD09EC262B0B850700471E4A /* AuthManager.swift in Sources */,
+				ADDF3A0F2B2E694400F3D7F8 /* LoadingOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -974,6 +1038,38 @@
 				minimumVersion = 10.19.0;
 			};
 		};
+		ADDF39FB2B292A4300F3D7F8 /* XCRemoteSwiftPackageReference "iOSDropDown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jriosdev/iOSDropDown.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+		ADDF3A102B302D9900F3D7F8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+		ADDF3A132B30311100F3D7F8 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
+		ADDF3A162B3174DB00F3D7F8 /* XCRemoteSwiftPackageReference "Down" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/iwasrobbed/Down.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1026,6 +1122,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ADDF39E62B286DE200F3D7F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		ADDF39FC2B292A4300F3D7F8 /* iOSDropDown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADDF39FB2B292A4300F3D7F8 /* XCRemoteSwiftPackageReference "iOSDropDown" */;
+			productName = iOSDropDown;
+		};
+		ADDF3A112B302D9900F3D7F8 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADDF3A102B302D9900F3D7F8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		ADDF3A142B30311100F3D7F8 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADDF3A132B30311100F3D7F8 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		ADDF3A172B3174DB00F3D7F8 /* Down */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADDF3A162B3174DB00F3D7F8 /* XCRemoteSwiftPackageReference "Down" */;
+			productName = Down;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
