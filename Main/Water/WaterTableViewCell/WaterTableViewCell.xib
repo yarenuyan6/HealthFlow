@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RedHatDisplay-Medium.otf">
+            <string>RedHatDisplay-Medium</string>
+        </array>
+        <array key="RedHatDisplay-Regular.otf">
+            <string>RedHatDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WaterTableViewCell" rowHeight="69" id="Wcd-cg-Eoh" customClass="WaterTableViewCell" customModule="HealthFlow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="293" height="69"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wcd-cg-Eoh" id="l7y-SB-oEK">
+                <rect key="frame" x="0.0" y="0.0" width="293" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9hj-Qj-D49">
+                        <rect key="frame" x="0.0" y="0.0" width="293" height="69"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glassOfWater" translatesAutoresizingMaskIntoConstraints="NO" id="9nF-bU-62d">
+                                <rect key="frame" x="8" y="19.666666666666671" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Ieu-xo-qNE"/>
+                                    <constraint firstAttribute="height" constant="30" id="yfW-9q-Jhh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 ml " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXv-vF-BON">
+                                <rect key="frame" x="46" y="24.666666666666671" width="47.666666666666657" height="20"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="15"/>
+                                <color key="textColor" name="blackOwn"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="13.50 " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khy-49-F3R" userLabel="13.50">
+                                <rect key="frame" x="101.66666666666667" y="24.666666666666671" width="183.33333333333331" height="20"/>
+                                <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="15"/>
+                                <color key="textColor" name="davysGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="69" id="iK3-8f-9lh"/>
+                        </constraints>
+                        <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="0.0" right="8"/>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9hj-Qj-D49" firstAttribute="top" secondItem="l7y-SB-oEK" secondAttribute="top" id="5YK-op-jeq"/>
+                    <constraint firstAttribute="trailing" secondItem="9hj-Qj-D49" secondAttribute="trailing" id="e0z-63-Unu"/>
+                    <constraint firstItem="9hj-Qj-D49" firstAttribute="leading" secondItem="l7y-SB-oEK" secondAttribute="leading" id="ecm-Gm-jGo"/>
+                    <constraint firstAttribute="bottom" secondItem="9hj-Qj-D49" secondAttribute="bottom" id="rcO-Sm-Nnf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="hourLabel" destination="Khy-49-F3R" id="Ck9-Ea-zjN"/>
+                <outlet property="millilitreLabel" destination="AXv-vF-BON" id="NRu-Mk-Iuj"/>
+            </connections>
+            <point key="canvasLocation" x="162.59541984732823" y="-271.47887323943661"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="glassOfWater" width="85.333335876464844" height="85.333335876464844"/>
+        <namedColor name="blackOwn">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="davysGray">
+            <color red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

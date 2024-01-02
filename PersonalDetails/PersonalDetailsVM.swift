@@ -17,7 +17,7 @@ enum PersonalDetailsPageTypes{
 }
 
 
-class ProfileDetailsVM {
+class PersonalDetailsVM {
     let initialHeightIndex = 50
     let initialWeightIndex = 40
     let initialDate: Date = Date()

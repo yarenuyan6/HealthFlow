@@ -18,11 +18,7 @@ class FoodTableViewCell: UITableViewCell{
     @IBOutlet weak var foodImageView: UIImageView!
     var imgUrl: String = ""
     var foodCount: Int = 0
-    var viewModel: FoodInterface!{
-        didSet{
-            setUpCell()
-        }
-    }
+    var viewModel: FoodVM!
     var indexPath: Int?
     static let identifier = "FoodTableViewCell"
     static let nibName = "FoodTableViewCell"
@@ -50,13 +46,14 @@ class FoodTableViewCell: UITableViewCell{
     }
     
     func tapGestures(){
-        let plusTapGesture = UITapGestureRecognizer(target: self, action: #selector(incrementFunc))
+//        let plusTapGesture = UITapGestureRecognizer(target: self, action: #selector(incrementFunc))
+        let plusTapGesture = UITapGestureRecognizer(target: self, action: #selector(goToDeterminePage))
         plusImageView.addGestureRecognizer(plusTapGesture)
         plusImageView.isUserInteractionEnabled = true
     }
     
     @objc func goToDeterminePage(){
-//        delegate.didTapButtonInCell()
+        delegate.didTapButtonInCell()
         plusImageView.image = UIImage(named: "check")
         
         
@@ -68,12 +65,12 @@ class FoodTableViewCell: UITableViewCell{
                     switch response.result {
                     case .success(let image):
                         self.imageCache.add(image, withIdentifier: imageURL)
-//                        print("Resim yüklendi: \(image)")
                     case .failure(let error):
                         print("Resim yüklenirken hata oluştu: \(error.localizedDescription)")
                     }
                 })
             }
+    
     @objc func incrementFunc(){
         foodCount += 1
         viewModel.foodCount = foodCount

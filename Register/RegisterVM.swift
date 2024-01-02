@@ -12,9 +12,9 @@ class RegisterVM{
     func getProfileDetailsVM(to email:String,
                              password:String,
                              name: String,
-                             surname: String) ->ProfileDetailsVM{
+                             surname: String) ->PersonalDetailsVM{
         let loginModel = LoginModel(email: email, password: password)
         let userModel = UserModel(name: name, lastName: surname)
-        return ProfileDetailsVM(user: userModel, loginModel: loginModel)
+        return PersonalDetailsVM(user: userModel, loginModel: loginModel)
     }
 }

@@ -33,7 +33,7 @@
 		AD0C989F2B03AA7500CB923D /* PersonalDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0C989E2B03AA7500CB923D /* PersonalDetails.storyboard */; };
 		AD0C98A12B03AB9B00CB923D /* PersonalDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0C98A02B03AB9B00CB923D /* PersonalDetailsVC.swift */; };
 		AD0C98A32B04D75E00CB923D /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0C98A22B04D75E00CB923D /* CustomDatePicker.swift */; };
-		AD51BB152B0746CB00C128C5 /* ProfileDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD51BB142B0746CB00C128C5 /* ProfileDetailsVM.swift */; };
+		AD51BB152B0746CB00C128C5 /* PersonalDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD51BB142B0746CB00C128C5 /* PersonalDetailsVM.swift */; };
 		AD51BB172B0750B200C128C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD51BB162B0750B200C128C5 /* Images.xcassets */; };
 		AD51BB192B075C6C00C128C5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD51BB182B075C6C00C128C5 /* Fonts.swift */; };
 		AD51BB382B078AD600C128C5 /* RedHatText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD51BB292B078AD500C128C5 /* RedHatText-Bold.otf */; };
@@ -51,10 +51,15 @@
 		AD51BB442B078AD600C128C5 /* RedHatDisplay-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD51BB352B078AD600C128C5 /* RedHatDisplay-MediumItalic.otf */; };
 		AD51BB452B078AD600C128C5 /* RedHatText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD51BB362B078AD600C128C5 /* RedHatText-Medium.otf */; };
 		AD51BB462B078AD600C128C5 /* RedHatText-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD51BB372B078AD600C128C5 /* RedHatText-MediumItalic.otf */; };
+		AD7F26D42B39C2A600751F29 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = AD7F26D32B39C2A600751F29 /* DGCharts */; };
+		AD7F26D62B39C2A600751F29 /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AD7F26D52B39C2A600751F29 /* DGChartsDynamic */; };
 		AD819D752B1CA99A000CD5F3 /* AddFood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD819D742B1CA99A000CD5F3 /* AddFood.storyboard */; };
 		AD819D772B1DAEE4000CD5F3 /* AddFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD819D762B1DAEE4000CD5F3 /* AddFoodVC.swift */; };
 		AD819D792B1DBDE1000CD5F3 /* AddFoodVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD819D782B1DBDE1000CD5F3 /* AddFoodVM.swift */; };
 		AD84B14E2B27F704004F9BF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD84B14D2B27F704004F9BF1 /* GoogleService-Info.plist */; };
+		AD8F37AD2B32D6F500A6F32C /* Water.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8F37AC2B32D6F500A6F32C /* Water.storyboard */; };
+		AD8F37B12B32E2FC00A6F32C /* WaterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8F37B02B32E2FC00A6F32C /* WaterVC.swift */; };
+		AD8F37B32B32FB2200A6F32C /* WaterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8F37B22B32FB2200A6F32C /* WaterModel.swift */; };
 		AD9B52F92B22762100E832B2 /* AmountAddedFood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9B52F82B22762100E832B2 /* AmountAddedFood.storyboard */; };
 		AD9B52FB2B23503F00E832B2 /* AmountAddedFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9B52FA2B23503F00E832B2 /* AmountAddedFoodVC.swift */; };
 		AD9B52FD2B2364CA00E832B2 /* AmountAddedFoodVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9B52FC2B2364CA00E832B2 /* AmountAddedFoodVM.swift */; };
@@ -70,6 +75,9 @@
 		ADB8CAA92B0903DF00EC9039 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8CAA82B0903DF00EC9039 /* RegisterVM.swift */; };
 		ADB8CAAB2B090E5800EC9039 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8CAAA2B090E5800EC9039 /* CustomButton.swift */; };
 		ADB8CAAD2B091C4000EC9039 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB8CAAC2B091C4000EC9039 /* LoginVM.swift */; };
+		ADBB50FD2B32FCC300C3BD79 /* WaterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBB50FC2B32FCC300C3BD79 /* WaterVM.swift */; };
+		ADBB51002B342B9B00C3BD79 /* WaterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADBB50FF2B342B9B00C3BD79 /* WaterTableViewCell.xib */; };
+		ADBB51022B342C0100C3BD79 /* WaterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBB51012B342C0100C3BD79 /* WaterTableViewCell.swift */; };
 		ADDF39E82B286DE200F3D7F8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF39E72B286DE200F3D7F8 /* FirebaseAuth */; };
 		ADDF39EA2B286DE200F3D7F8 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF39E92B286DE200F3D7F8 /* FirebaseAuthCombine-Community */; };
 		ADDF39EC2B286DE200F3D7F8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF39EB2B286DE200F3D7F8 /* FirebaseDatabase */; };
@@ -80,7 +88,6 @@
 		ADDF39F62B286DE200F3D7F8 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF39F52B286DE200F3D7F8 /* FirebaseMessaging */; };
 		ADDF39F82B286DE200F3D7F8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF39F72B286DE200F3D7F8 /* FirebaseStorage */; };
 		ADDF39FA2B286DE200F3D7F8 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF39F92B286DE200F3D7F8 /* FirebaseStorageCombine-Community */; };
-		ADDF39FD2B292A4300F3D7F8 /* iOSDropDown in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF39FC2B292A4300F3D7F8 /* iOSDropDown */; };
 		ADDF3A022B2BDD7300F3D7F8 /* EditHeightWeight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADDF3A012B2BDD7300F3D7F8 /* EditHeightWeight.storyboard */; };
 		ADDF3A042B2BDD9100F3D7F8 /* EditHeightWeightVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF3A032B2BDD9100F3D7F8 /* EditHeightWeightVC.swift */; };
 		ADDF3A062B2D28D000F3D7F8 /* EditHeightWeightVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF3A052B2D28D000F3D7F8 /* EditHeightWeightVM.swift */; };
@@ -90,7 +97,6 @@
 		ADDF3A0F2B2E694400F3D7F8 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF3A0E2B2E694400F3D7F8 /* LoadingOverlay.swift */; };
 		ADDF3A122B302D9900F3D7F8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF3A112B302D9900F3D7F8 /* Alamofire */; };
 		ADDF3A152B30311100F3D7F8 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF3A142B30311100F3D7F8 /* AlamofireImage */; };
-		ADDF3A182B3174DB00F3D7F8 /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = ADDF3A172B3174DB00F3D7F8 /* Down */; };
 		ADDF3A1A2B318B6800F3D7F8 /* MeasureUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF3A192B318B6800F3D7F8 /* MeasureUnits.swift */; };
 /* End PBXBuildFile section */
 
@@ -138,7 +144,7 @@
 		AD0C989E2B03AA7500CB923D /* PersonalDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonalDetails.storyboard; sourceTree = "<group>"; };
 		AD0C98A02B03AB9B00CB923D /* PersonalDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailsVC.swift; sourceTree = "<group>"; };
 		AD0C98A22B04D75E00CB923D /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
-		AD51BB142B0746CB00C128C5 /* ProfileDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsVM.swift; sourceTree = "<group>"; };
+		AD51BB142B0746CB00C128C5 /* PersonalDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailsVM.swift; sourceTree = "<group>"; };
 		AD51BB162B0750B200C128C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AD51BB182B075C6C00C128C5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		AD51BB292B078AD500C128C5 /* RedHatText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RedHatText-Bold.otf"; sourceTree = "<group>"; };
@@ -160,6 +166,9 @@
 		AD819D762B1DAEE4000CD5F3 /* AddFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodVC.swift; sourceTree = "<group>"; };
 		AD819D782B1DBDE1000CD5F3 /* AddFoodVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodVM.swift; sourceTree = "<group>"; };
 		AD84B14D2B27F704004F9BF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AD8F37AC2B32D6F500A6F32C /* Water.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Water.storyboard; sourceTree = "<group>"; };
+		AD8F37B02B32E2FC00A6F32C /* WaterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterVC.swift; sourceTree = "<group>"; };
+		AD8F37B22B32FB2200A6F32C /* WaterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterModel.swift; sourceTree = "<group>"; };
 		AD9B52F82B22762100E832B2 /* AmountAddedFood.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AmountAddedFood.storyboard; sourceTree = "<group>"; };
 		AD9B52FA2B23503F00E832B2 /* AmountAddedFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountAddedFoodVC.swift; sourceTree = "<group>"; };
 		AD9B52FC2B2364CA00E832B2 /* AmountAddedFoodVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountAddedFoodVM.swift; sourceTree = "<group>"; };
@@ -179,6 +188,9 @@
 		ADB8CAA82B0903DF00EC9039 /* RegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
 		ADB8CAAA2B090E5800EC9039 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		ADB8CAAC2B091C4000EC9039 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		ADBB50FC2B32FCC300C3BD79 /* WaterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterVM.swift; sourceTree = "<group>"; };
+		ADBB50FF2B342B9B00C3BD79 /* WaterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaterTableViewCell.xib; sourceTree = "<group>"; };
+		ADBB51012B342C0100C3BD79 /* WaterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterTableViewCell.swift; sourceTree = "<group>"; };
 		ADDF3A012B2BDD7300F3D7F8 /* EditHeightWeight.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditHeightWeight.storyboard; sourceTree = "<group>"; };
 		ADDF3A032B2BDD9100F3D7F8 /* EditHeightWeightVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHeightWeightVC.swift; sourceTree = "<group>"; };
 		ADDF3A052B2D28D000F3D7F8 /* EditHeightWeightVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHeightWeightVM.swift; sourceTree = "<group>"; };
@@ -194,19 +206,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD7F26D42B39C2A600751F29 /* DGCharts in Frameworks */,
 				ADDF3A152B30311100F3D7F8 /* AlamofireImage in Frameworks */,
 				ADDF39F62B286DE200F3D7F8 /* FirebaseMessaging in Frameworks */,
 				ADDF39EE2B286DE200F3D7F8 /* FirebaseDatabaseSwift in Frameworks */,
 				ADDF39FA2B286DE200F3D7F8 /* FirebaseStorageCombine-Community in Frameworks */,
 				ADDF39F82B286DE200F3D7F8 /* FirebaseStorage in Frameworks */,
-				ADDF39FD2B292A4300F3D7F8 /* iOSDropDown in Frameworks */,
-				ADDF3A182B3174DB00F3D7F8 /* Down in Frameworks */,
 				ADDF39EC2B286DE200F3D7F8 /* FirebaseDatabase in Frameworks */,
 				ADDF39E82B286DE200F3D7F8 /* FirebaseAuth in Frameworks */,
 				ADDF39F42B286DE200F3D7F8 /* FirebaseFirestoreSwift in Frameworks */,
 				ADDF39F22B286DE200F3D7F8 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				ADDF3A122B302D9900F3D7F8 /* Alamofire in Frameworks */,
 				ADDF39F02B286DE200F3D7F8 /* FirebaseFirestore in Frameworks */,
+				AD7F26D62B39C2A600751F29 /* DGChartsDynamic in Frameworks */,
 				ADDF39EA2B286DE200F3D7F8 /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +315,7 @@
 		AD0C988B2B02486400CB923D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				AD8F37AB2B32D6DB00A6F32C /* Water */,
 				ADDF39FE2B2BDD1700F3D7F8 /* EditHeightWeight */,
 				AD09EC3E2B1624DC00471E4A /* Food */,
 				AD09EC3A2B1486D600471E4A /* MainVM.swift */,
@@ -338,7 +351,7 @@
 			children = (
 				AD0C989E2B03AA7500CB923D /* PersonalDetails.storyboard */,
 				AD0C98A02B03AB9B00CB923D /* PersonalDetailsVC.swift */,
-				AD51BB142B0746CB00C128C5 /* ProfileDetailsVM.swift */,
+				AD51BB142B0746CB00C128C5 /* PersonalDetailsVM.swift */,
 			);
 			path = PersonalDetails;
 			sourceTree = "<group>";
@@ -373,6 +386,18 @@
 				AD819D782B1DBDE1000CD5F3 /* AddFoodVM.swift */,
 			);
 			path = AddFood;
+			sourceTree = "<group>";
+		};
+		AD8F37AB2B32D6DB00A6F32C /* Water */ = {
+			isa = PBXGroup;
+			children = (
+				ADBB50FE2B342B7800C3BD79 /* WaterTableViewCell */,
+				AD8F37AC2B32D6F500A6F32C /* Water.storyboard */,
+				AD8F37B02B32E2FC00A6F32C /* WaterVC.swift */,
+				AD8F37B22B32FB2200A6F32C /* WaterModel.swift */,
+				ADBB50FC2B32FCC300C3BD79 /* WaterVM.swift */,
+			);
+			path = Water;
 			sourceTree = "<group>";
 		};
 		AD9B52F72B2275EF00E832B2 /* AmountAddedFood */ = {
@@ -457,6 +482,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		ADBB50FE2B342B7800C3BD79 /* WaterTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				ADBB50FF2B342B9B00C3BD79 /* WaterTableViewCell.xib */,
+				ADBB51012B342C0100C3BD79 /* WaterTableViewCell.swift */,
+			);
+			path = WaterTableViewCell;
+			sourceTree = "<group>";
+		};
 		ADDF39FE2B2BDD1700F3D7F8 /* EditHeightWeight */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,10 +538,10 @@
 				ADDF39F52B286DE200F3D7F8 /* FirebaseMessaging */,
 				ADDF39F72B286DE200F3D7F8 /* FirebaseStorage */,
 				ADDF39F92B286DE200F3D7F8 /* FirebaseStorageCombine-Community */,
-				ADDF39FC2B292A4300F3D7F8 /* iOSDropDown */,
 				ADDF3A112B302D9900F3D7F8 /* Alamofire */,
 				ADDF3A142B30311100F3D7F8 /* AlamofireImage */,
-				ADDF3A172B3174DB00F3D7F8 /* Down */,
+				AD7F26D32B39C2A600751F29 /* DGCharts */,
+				AD7F26D52B39C2A600751F29 /* DGChartsDynamic */,
 			);
 			productName = HealthFlow;
 			productReference = ADA256322B0156DB003BB7D1 /* HealthFlow.app */;
@@ -583,10 +617,9 @@
 			mainGroup = ADA256292B0156DA003BB7D1;
 			packageReferences = (
 				ADDF39E62B286DE200F3D7F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				ADDF39FB2B292A4300F3D7F8 /* XCRemoteSwiftPackageReference "iOSDropDown" */,
 				ADDF3A102B302D9900F3D7F8 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				ADDF3A132B30311100F3D7F8 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
-				ADDF3A162B3174DB00F3D7F8 /* XCRemoteSwiftPackageReference "Down" */,
+				AD7F26D22B397DE300751F29 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = ADA256332B0156DB003BB7D1 /* Products */;
 			projectDirPath = "";
@@ -614,6 +647,7 @@
 				AD51BB3C2B078AD600C128C5 /* RedHatDisplay-BlackItalic.otf in Resources */,
 				AD819D752B1CA99A000CD5F3 /* AddFood.storyboard in Resources */,
 				AD51BB452B078AD600C128C5 /* RedHatText-Medium.otf in Resources */,
+				AD8F37AD2B32D6F500A6F32C /* Water.storyboard in Resources */,
 				AD51BB3B2B078AD600C128C5 /* SIL Open Font License.txt in Resources */,
 				AD51BB432B078AD600C128C5 /* RedHatDisplay-Black.otf in Resources */,
 				AD51BB3F2B078AD600C128C5 /* RedHatDisplay-BoldItalic.otf in Resources */,
@@ -626,6 +660,7 @@
 				AD51BB412B078AD600C128C5 /* RedHatDisplay-Italic.otf in Resources */,
 				AD0C98912B0249D900CB923D /* Onboarding.storyboard in Resources */,
 				AD09EC402B1624EB00471E4A /* Food.storyboard in Resources */,
+				ADBB51002B342B9B00C3BD79 /* WaterTableViewCell.xib in Resources */,
 				AD09EC4A2B18828500471E4A /* FoodTableViewCell.xib in Resources */,
 				AD51BB3E2B078AD600C128C5 /* RedHatDisplay-Bold.otf in Resources */,
 				AD0C98842B0213C700CB923D /* Login.storyboard in Resources */,
@@ -670,7 +705,9 @@
 				ADA2563A2B0156DB003BB7D1 /* MainVC.swift in Sources */,
 				AD0C98A12B03AB9B00CB923D /* PersonalDetailsVC.swift in Sources */,
 				AD9B52FB2B23503F00E832B2 /* AmountAddedFoodVC.swift in Sources */,
+				ADBB51022B342C0100C3BD79 /* WaterTableViewCell.swift in Sources */,
 				AD0C988A2B02377900CB923D /* LoginVC.swift in Sources */,
+				AD8F37B32B32FB2200A6F32C /* WaterModel.swift in Sources */,
 				AD09EC472B17325C00471E4A /* FoodVC.swift in Sources */,
 				AD09EC4C2B189D9600471E4A /* FoodTableViewCell.swift in Sources */,
 				AD09EC3B2B1486D600471E4A /* MainVM.swift in Sources */,
@@ -678,11 +715,13 @@
 				AD09EC442B1731A200471E4A /* SelectedFoodTableViewCell.swift in Sources */,
 				AD0C98952B035EF900CB923D /* UnderlinedLabel.swift in Sources */,
 				AD09EC512B19DB4E00471E4A /* FoodVM.swift in Sources */,
-				AD51BB152B0746CB00C128C5 /* ProfileDetailsVM.swift in Sources */,
+				AD51BB152B0746CB00C128C5 /* PersonalDetailsVM.swift in Sources */,
 				ADDF3A042B2BDD9100F3D7F8 /* EditHeightWeightVC.swift in Sources */,
+				ADBB50FD2B32FCC300C3BD79 /* WaterVM.swift in Sources */,
 				AD819D792B1DBDE1000CD5F3 /* AddFoodVM.swift in Sources */,
 				AD09EC172B0B583600471E4A /* DeviceUtils.swift in Sources */,
 				AD0C988D2B02488000CB923D /* OnboardingVC.swift in Sources */,
+				AD8F37B12B32E2FC00A6F32C /* WaterVC.swift in Sources */,
 				ADA256362B0156DB003BB7D1 /* AppDelegate.swift in Sources */,
 				AD0C98A32B04D75E00CB923D /* CustomDatePicker.swift in Sources */,
 				ADDF3A062B2D28D000F3D7F8 /* EditHeightWeightVM.swift in Sources */,
@@ -1030,20 +1069,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AD7F26D22B397DE300751F29 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		ADDF39E62B286DE200F3D7F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 10.19.0;
-			};
-		};
-		ADDF39FB2B292A4300F3D7F8 /* XCRemoteSwiftPackageReference "iOSDropDown" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jriosdev/iOSDropDown.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.4.0;
 			};
 		};
 		ADDF3A102B302D9900F3D7F8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
@@ -1062,17 +1101,19 @@
 				minimumVersion = 4.3.0;
 			};
 		};
-		ADDF3A162B3174DB00F3D7F8 /* XCRemoteSwiftPackageReference "Down" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/iwasrobbed/Down.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AD7F26D32B39C2A600751F29 /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD7F26D22B397DE300751F29 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
+		AD7F26D52B39C2A600751F29 /* DGChartsDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD7F26D22B397DE300751F29 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGChartsDynamic;
+		};
 		ADDF39E72B286DE200F3D7F8 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ADDF39E62B286DE200F3D7F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -1123,11 +1164,6 @@
 			package = ADDF39E62B286DE200F3D7F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
 		};
-		ADDF39FC2B292A4300F3D7F8 /* iOSDropDown */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ADDF39FB2B292A4300F3D7F8 /* XCRemoteSwiftPackageReference "iOSDropDown" */;
-			productName = iOSDropDown;
-		};
 		ADDF3A112B302D9900F3D7F8 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ADDF3A102B302D9900F3D7F8 /* XCRemoteSwiftPackageReference "Alamofire" */;
@@ -1137,11 +1173,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ADDF3A132B30311100F3D7F8 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
-		};
-		ADDF3A172B3174DB00F3D7F8 /* Down */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = ADDF3A162B3174DB00F3D7F8 /* XCRemoteSwiftPackageReference "Down" */;
-			productName = Down;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

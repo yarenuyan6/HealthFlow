@@ -27,7 +27,7 @@ class PersonalDetailsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var maleLabel: UILabel!
     @IBOutlet weak var femaleLabel: UILabel!
     @IBOutlet weak var birthDatePicker: UIDatePicker!
-    var viewModel: ProfileDetailsVM!
+    var viewModel: PersonalDetailsVM!
 //    var user : UserModel!
     var state : Int! = 0 {
         didSet{

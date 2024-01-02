@@ -56,8 +56,10 @@ class AddFoodVC: UIViewController {
     
     
     @IBAction func doneButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true)
+          
         viewModel.addSelectedFood()
+          
+          self.dismiss(animated: true)
     }
     
     func loadImages() {
@@ -110,16 +112,18 @@ extension AddFoodVC: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: FoodTableViewCell.identifier) as! FoodTableViewCell
         cell.indexPath = indexPath.row
         cell.viewModel = viewModel
+        cell.viewModel.foodModelArray = viewModel.foodModelArray 
+        cell.setUpCell()
         
-        delegate = TableViewCellDelegate(action:{
+        delegate = TableViewCellDelegate(action:{ [self] in
             let amountAddedFoodVC = UIStoryboard (name: "AmountAddedFood", bundle: nil).instantiateViewController(withIdentifier: "AmountAddedFoodVC") as! AmountAddedFoodVC
             let amountAddedFoodVM = AmountAddedFoodVM()
             amountAddedFoodVC.viewModel = amountAddedFoodVM
                    let navigationController = UINavigationController(rootViewController: amountAddedFoodVC)
                    navigationController.modalPresentationStyle = .overCurrentContext
             navigationController.isNavigationBarHidden = true
-            amountAddedFoodVC.viewModel.foodName = cell.foodNameLabel.text
-            amountAddedFoodVC.viewModel.foodImageUrl = cell.imgUrl
+            amountAddedFoodVC.viewModel.foodArray = viewModel.foodModelArray
+            amountAddedFoodVC.indexPath = cell.indexPath
                    self.present(navigationController ,animated: true)
         })
         cell.delegate = self.delegate

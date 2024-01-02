@@ -56,6 +56,7 @@ class FoodVC: UIViewController {
         let addFoodVC = UIStoryboard (name: "AddFood", bundle: nil).instantiateViewController(withIdentifier: "AddFoodVC") as! AddFoodVC
         addFoodVC.modalPresentationStyle = .overCurrentContext
         addFoodVC.viewModel = viewModel
+        addFoodVC.viewModel.foodModelArray = viewModel.foodModelArray
         self.present(addFoodVC, animated: true, completion: nil)
     }
 }

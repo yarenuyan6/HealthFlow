@@ -29,13 +29,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bhX-g6-00L">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="394" height="852"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eAl-Cm-x9L">
-                                        <rect key="frame" x="16" y="0.0" width="361" height="852"/>
+                                        <rect key="frame" x="16" y="0.0" width="362" height="852"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S18-kh-RDe">
-                                                <rect key="frame" x="16" y="60" width="329" height="40"/>
+                                                <rect key="frame" x="16" y="60" width="330" height="40"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nN5-Ps-gm9">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -45,16 +45,16 @@
                                                         </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="kNp-sE-VJ3">
-                                                        <rect key="frame" x="50" y="0.0" width="239" height="40"/>
+                                                        <rect key="frame" x="50" y="0.0" width="240" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Good Morning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knu-uV-MHc">
-                                                                <rect key="frame" x="0.0" y="0.0" width="239" height="22.666666666666668"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="240" height="22.666666666666668"/>
                                                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="17"/>
                                                                 <color key="textColor" name="celticBlue"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-cZ-i7B">
-                                                                <rect key="frame" x="0.0" y="24.666666666666668" width="239" height="15.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="24.666666666666668" width="240" height="15.333333333333332"/>
                                                                 <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="15"/>
                                                                 <color key="textColor" name="blackOwn"/>
                                                                 <nil key="highlightedColor"/>
@@ -62,7 +62,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account" translatesAutoresizingMaskIntoConstraints="NO" id="xek-Ps-wrc">
-                                                        <rect key="frame" x="299" y="0.0" width="30" height="40"/>
+                                                        <rect key="frame" x="300" y="0.0" width="30" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="aR2-Re-P4S"/>
                                                             <constraint firstAttribute="height" constant="40" id="vwO-8S-Yih"/>
@@ -71,43 +71,46 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l3v-3X-xIU">
-                                                <rect key="frame" x="16" y="110" width="329" height="734"/>
+                                                <rect key="frame" x="16" y="110" width="330" height="734"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="zxC-5t-qIg">
-                                                        <rect key="frame" x="0.0" y="10" width="329" height="258"/>
+                                                        <rect key="frame" x="0.0" y="10" width="330" height="258"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rs-3d-OuT">
-                                                                <rect key="frame" x="0.0" y="0.0" width="329" height="24"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="330" height="24"/>
                                                                 <fontDescription key="fontDescription" name="RedHatDisplay-Bold" family="Red Hat Display" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yc5-IK-avb">
-                                                                <rect key="frame" x="0.0" y="42.000000000000007" width="329" height="88.666666666666686"/>
+                                                                <rect key="frame" x="0.0" y="42.000000000000007" width="330" height="88.666666666666686"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cjy-w6-J24">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="153.66666666666666" height="88.666666666666671"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="155" height="88.666666666666671"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drop" translatesAutoresizingMaskIntoConstraints="NO" id="2Hf-Pb-E2S">
-                                                                                <rect key="frame" x="61.666666666666671" y="8" width="30" height="30"/>
+                                                                                <rect key="frame" x="62.666666666666671" y="8" width="30" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="30" id="YtS-6M-hNy"/>
                                                                                     <constraint firstAttribute="width" constant="30" id="yJ1-De-Fj0"/>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="245" verticalHuggingPriority="245" horizontalCompressionResistancePriority="745" verticalCompressionResistancePriority="747" text="1300 of 2400 ml " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDV-mU-giX">
-                                                                                <rect key="frame" x="22.999999999999993" y="42" width="107.33333333333331" height="18.666666666666671"/>
+                                                                                <rect key="frame" x="23.999999999999993" y="42" width="107.33333333333331" height="18.666666666666671"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="14"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water Tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oh0-0D-lx8">
-                                                                                <rect key="frame" x="39.999999999999993" y="64.666666666666657" width="73.333333333333314" height="16"/>
+                                                                                <rect key="frame" x="40.999999999999993" y="64.666666666666657" width="73.333333333333314" height="16"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="12"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="155" id="lJC-DZ-VOt"/>
+                                                                        </constraints>
                                                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -116,10 +119,10 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="AK4-fk-WL8">
-                                                                        <rect key="frame" x="173.66666666666663" y="0.0" width="155.33333333333337" height="88.666666666666671"/>
+                                                                        <rect key="frame" x="175" y="0.0" width="155" height="88.666666666666671"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple" translatesAutoresizingMaskIntoConstraints="NO" id="ne5-cf-SCU">
-                                                                                <rect key="frame" x="62.666666666666657" y="8" width="30" height="30"/>
+                                                                                <rect key="frame" x="62.666666666666686" y="8" width="30" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="30" id="uym-QQ-Bmr"/>
                                                                                     <constraint firstAttribute="height" constant="30" id="vaf-ue-gMk"/>
@@ -132,12 +135,15 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories Consumed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbk-hh-XSW">
-                                                                                <rect key="frame" x="25.666666666666686" y="64.666666666666657" width="104" height="16"/>
+                                                                                <rect key="frame" x="25.666666666666657" y="64.666666666666657" width="104" height="16"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="12"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="155" id="Zc6-kI-tHi"/>
+                                                                        </constraints>
                                                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -148,31 +154,31 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0WQ-bZ-vNX">
-                                                                <rect key="frame" x="0.0" y="148.66666666666669" width="329" height="109.33333333333331"/>
+                                                                <rect key="frame" x="0.0" y="148.66666666666669" width="330" height="109.33333333333331"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jM3-kV-TxD">
-                                                                        <rect key="frame" x="16" y="12.000000000000002" width="297" height="22.666666666666671"/>
+                                                                        <rect key="frame" x="16" y="12.000000000000002" width="298" height="22.666666666666671"/>
                                                                         <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="17"/>
                                                                         <color key="textColor" name="blackOwn"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21.06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA6-HU-4Ci">
-                                                                        <rect key="frame" x="16" y="44.666666666666629" width="297" height="22.666666666666671"/>
+                                                                        <rect key="frame" x="16" y="44.666666666666629" width="298" height="22.666666666666671"/>
                                                                         <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="17"/>
                                                                         <color key="textColor" name="blackOwn"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Pqa-OR-pJO">
-                                                                        <rect key="frame" x="16" y="77.333333333333314" width="297" height="20"/>
+                                                                        <rect key="frame" x="16" y="77.333333333333314" width="298" height="20"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Height and Weight" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNQ-4i-415">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="270" height="20"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="271" height="20"/>
                                                                                 <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="14"/>
                                                                                 <color key="textColor" name="jet"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="next" translatesAutoresizingMaskIntoConstraints="NO" id="y1P-Yn-YHW">
-                                                                                <rect key="frame" x="277" y="0.0" width="20" height="20"/>
+                                                                                <rect key="frame" x="278" y="0.0" width="20" height="20"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="20" id="ZT6-1s-Q1F"/>
                                                                                     <constraint firstAttribute="width" constant="20" id="gaf-X2-MEc"/>
@@ -222,6 +228,7 @@
                         <outlet property="greetingsLabel" destination="Knu-uV-MHc" id="HJM-6z-rQ6"/>
                         <outlet property="nameLabel" destination="6Mb-cZ-i7B" id="6m1-Fm-lSr"/>
                         <outlet property="profileImageView" destination="xek-Ps-wrc" id="JgR-1K-lHg"/>
+                        <outlet property="waterIntakeLabel" destination="hDV-mU-giX" id="C7G-J4-o48"/>
                         <outlet property="waterStackView" destination="cjy-w6-J24" id="O0M-G9-x1p"/>
                     </connections>
                 </viewController>

@@ -29,10 +29,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Kvq-Vi-0k2">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="440"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="584"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="k0C-6r-bnY">
-                                                <rect key="frame" x="20" y="65" width="390" height="310"/>
+                                                <rect key="frame" x="20" y="65" width="390" height="454"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="AsZ-WD-g6o">
                                                         <rect key="frame" x="0.0" y="0.0" width="390" height="30"/>
@@ -62,7 +62,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1" verticalCompressionResistancePriority="1000" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gpv-Zv-dq9">
-                                                        <rect key="frame" x="0.0" y="50" width="390" height="260"/>
+                                                        <rect key="frame" x="0.0" y="50" width="390" height="404"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="klT-Gt-Qxl">
                                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="65"/>
@@ -88,11 +88,11 @@
                                                                 </subviews>
                                                                 <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="5" right="0.0"/>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1C2-gP-T2j">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1C2-gP-T2j">
                                                                 <rect key="frame" x="0.0" y="85" width="390" height="45"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0OD-RE-CYR">
-                                                                        <rect key="frame" x="20.000000000000007" y="0.0" width="96.666666666666686" height="45"/>
+                                                                        <rect key="frame" x="9.9999999999999929" y="0.0" width="113.33333333333331" height="45"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="Czw-Vf-Fch"/>
                                                                         </constraints>
@@ -105,8 +105,8 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeV-cM-h23">
-                                                                        <rect key="frame" x="146.66666666666666" y="0.0" width="96.666666666666657" height="45"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeV-cM-h23">
+                                                                        <rect key="frame" x="138.33333333333334" y="0.0" width="113.33333333333334" height="45"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="dE2-uz-X8c"/>
                                                                         </constraints>
@@ -119,8 +119,8 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sp-es-KrJ">
-                                                                        <rect key="frame" x="273.33333333333331" y="0.0" width="96.666666666666686" height="45"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sp-es-KrJ">
+                                                                        <rect key="frame" x="266.66666666666669" y="0.0" width="113.33333333333331" height="45"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="lFf-N7-UOw"/>
                                                                         </constraints>
@@ -134,7 +134,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </button>
                                                                 </subviews>
-                                                                <edgeInsets key="layoutMargins" top="0.0" left="20" bottom="0.0" right="20"/>
+                                                                <edgeInsets key="layoutMargins" top="0.0" left="10" bottom="0.0" right="10"/>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZMe-zR-xCo">
                                                                 <rect key="frame" x="0.0" y="150" width="390" height="40"/>
@@ -172,6 +172,111 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </button>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="25g-07-ZOM">
+                                                                <rect key="frame" x="0.0" y="280" width="390" height="124"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For 100g" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnm-Qi-Te3">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="22.666666666666668"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fi-Tf-FNA">
+                                                                        <rect key="frame" x="0.0" y="26.666666666666686" width="390" height="21.333333333333329"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="16"/>
+                                                                        <color key="textColor" name="blackOwn"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbohydrate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hn-Vh-Mjf">
+                                                                        <rect key="frame" x="0.0" y="52" width="390" height="21.333333333333329"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="16"/>
+                                                                        <color key="textColor" name="blackOwn"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLb-Km-Fx9">
+                                                                        <rect key="frame" x="0.0" y="77.333333333333314" width="390" height="21.333333333333329"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="16"/>
+                                                                        <color key="textColor" name="blackOwn"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fkc-aB-k70">
+                                                                        <rect key="frame" x="0.0" y="102.66666666666669" width="390" height="21.333333333333329"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="16"/>
+                                                                        <color key="textColor" name="blackOwn"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bL4-uq-r4v">
+                                                                <rect key="frame" x="0.0" y="404" width="390" height="16"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For 1 Cup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9H2-XR-lHz">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="0.0"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rY7-hA-Q6s">
+                                                                        <rect key="frame" x="0.0" y="4" width="390" height="0.0"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="16"/>
+                                                                        <color key="textColor" name="blackOwn"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbohydrate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAW-y3-Anz">
+                                                                        <rect key="frame" x="0.0" y="8" width="390" height="0.0"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="16"/>
+                                                                        <color key="textColor" name="blackOwn"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTg-CJ-uDD">
+                                                                        <rect key="frame" x="0.0" y="12" width="390" height="0.0"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="16"/>
+                                                                        <color key="textColor" name="blackOwn"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdY-WE-6hv">
+                                                                        <rect key="frame" x="0.0" y="16" width="390" height="0.0"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="16"/>
+                                                                        <color key="textColor" name="blackOwn"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="IJQ-F0-b14">
+                                                                <rect key="frame" x="0.0" y="404" width="390" height="16"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For 1 Unit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhp-U5-gFr">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="0.0"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mce-I9-65i">
+                                                                        <rect key="frame" x="0.0" y="4" width="390" height="0.0"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="16"/>
+                                                                        <color key="textColor" name="blackOwn"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbohydrate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zn-5o-W6B">
+                                                                        <rect key="frame" x="0.0" y="8" width="390" height="0.0"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="16"/>
+                                                                        <color key="textColor" name="blackOwn"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDj-Zt-Hez">
+                                                                        <rect key="frame" x="0.0" y="12" width="390" height="0.0"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="16"/>
+                                                                        <color key="textColor" name="blackOwn"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjE-xa-eY5">
+                                                                        <rect key="frame" x="0.0" y="16" width="390" height="0.0"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="16"/>
+                                                                        <color key="textColor" name="blackOwn"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -194,11 +299,19 @@
                     <connections>
                         <outlet property="addButton" destination="nKQ-ck-diN" id="DJK-kA-xGh"/>
                         <outlet property="amountTextField" destination="GXe-oT-aei" id="9K9-2H-vrm"/>
+                        <outlet property="caloriesLabel" destination="2Fi-Tf-FNA" id="PjC-RW-VZ5"/>
+                        <outlet property="carbsLabel" destination="4Hn-Vh-Mjf" id="jky-cg-w2b"/>
                         <outlet property="closeImageView" destination="vKp-C4-jnQ" id="gBD-uE-Fb3"/>
                         <outlet property="cupButton" destination="NeV-cM-h23" id="xxT-83-cpN"/>
+                        <outlet property="cupStackView" destination="bL4-uq-r4v" id="Uof-Ax-MRk"/>
+                        <outlet property="fatLabel" destination="Fkc-aB-k70" id="jMi-wp-Jqi"/>
                         <outlet property="foodImageView" destination="IDg-fd-oE4" id="a5d-4L-dfC"/>
                         <outlet property="foodNameLabel" destination="eEr-Pu-Jeb" id="RqF-Ma-fIh"/>
                         <outlet property="grButton" destination="0OD-RE-CYR" id="J3W-Dw-o4X"/>
+                        <outlet property="grStackView" destination="25g-07-ZOM" id="6l8-u6-cGz"/>
+                        <outlet property="proteinLabel" destination="TLb-Km-Fx9" id="pGC-dR-UUn"/>
+                        <outlet property="unitButton" destination="0sp-es-KrJ" id="gry-8E-uvp"/>
+                        <outlet property="unitStackView" destination="IJQ-F0-b14" id="a9o-S4-d9N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

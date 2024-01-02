@@ -12,6 +12,9 @@
         <array key="RedHatDisplay-Medium.otf">
             <string>RedHatDisplay-Medium</string>
         </array>
+        <array key="RedHatDisplay-Regular.otf">
+            <string>RedHatDisplay-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Edit Height WeightVC-->
@@ -58,19 +61,19 @@
                                                 <rect key="frame" x="0.0" y="50" width="361" height="682"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1" verticalCompressionResistancePriority="1000" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qc9-KD-u99">
-                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="247.33333333333334"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="244.66666666666666"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KAu-vv-UrU">
-                                                                <rect key="frame" x="8" y="8" width="345" height="70.666666666666671"/>
+                                                                <rect key="frame" x="8" y="8" width="345" height="69.333333333333329"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4U-Fo-bGl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="22.666666666666668"/>
-                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="21.333333333333332"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="16"/>
                                                                         <color key="textColor" name="blackOwn"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c1M-ZW-x2y">
-                                                                        <rect key="frame" x="0.0" y="30.666666666666657" width="345" height="40"/>
+                                                                        <rect key="frame" x="0.0" y="29.333333333333343" width="345" height="40"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="40" id="IZI-SY-hmv"/>
                                                                         </constraints>
@@ -80,16 +83,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="82g-fq-ksg">
-                                                                <rect key="frame" x="8" y="98.666666666666657" width="345" height="70.666666666666657"/>
+                                                                <rect key="frame" x="8" y="97.333333333333343" width="345" height="69.333333333333343"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUU-BY-umy">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="22.666666666666668"/>
-                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="17"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="21.333333333333332"/>
+                                                                        <fontDescription key="fontDescription" name="RedHatDisplay-Regular" family="Red Hat Display" pointSize="16"/>
                                                                         <color key="textColor" name="blackOwn"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1q-YJ-Mtw">
-                                                                        <rect key="frame" x="0.0" y="30.666666666666686" width="345" height="40"/>
+                                                                        <rect key="frame" x="0.0" y="29.333333333333314" width="345" height="40"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="40" id="BGo-0V-nsw"/>
                                                                         </constraints>
@@ -99,7 +102,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LAM-if-Vga">
-                                                                <rect key="frame" x="8" y="189.33333333333331" width="345" height="50"/>
+                                                                <rect key="frame" x="8" y="186.66666666666669" width="345" height="50"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6b8-44-JSY">
                                                                         <rect key="frame" x="16" y="0.0" width="313" height="50"/>

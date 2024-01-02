@@ -37,12 +37,12 @@
       }
     },
     {
-      "identity" : "down",
+      "identity" : "charts",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/iwasrobbed/Down.git",
+      "location" : "https://github.com/danielgindi/Charts.git",
       "state" : {
-        "branch" : "master",
-        "revision" : "e754ab1c80920dd51a8e08290c912ac1c2ac8b58"
+        "revision" : "0a229f8c914b0ec93798cee058cf75b339297513",
+        "version" : "5.0.0"
       }
     },
     {
@@ -106,15 +106,6 @@
       "state" : {
         "revision" : "2d12673670417654f08f5f90fdd62926dc3a2648",
         "version" : "100.0.0"
-      }
-    },
-    {
-      "identity" : "iosdropdown",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/jriosdev/iOSDropDown.git",
-      "state" : {
-        "revision" : "945c4f1945ed37a31055e812a5ee11a3d06e88ab",
-        "version" : "0.4.0"
       }
     },
     {

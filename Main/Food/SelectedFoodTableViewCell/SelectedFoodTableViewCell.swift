@@ -14,7 +14,7 @@ class SelectedFoodTableViewCell: UITableViewCell{
     @IBOutlet weak var foodCountLabel: UILabel!
     @IBOutlet weak var plusImageView: UIImageView!
     @IBOutlet weak var minusImageView: UIImageView!
-    var viewModel: FoodInterface!{
+    var viewModel: FoodVM!{
         didSet{
             setUpCell()
         }
@@ -71,10 +71,6 @@ class SelectedFoodTableViewCell: UITableViewCell{
         viewModel.viewInterface?.setUpProgressViews()
         }
     
-//    func addSelectedItem(){
-//        guard let indexPath = indexPath, let selectedModel = viewModel.foodModelArray?[indexPath] else { return }
-//        viewModel.selectedFoodModelArray.append(selectedModel)
-//    }
     
     func decrementSelectedFood(_ foodModel: FoodModelProtocol) {
         if let existingIndex = viewModel.selectedFoods.firstIndex(where: { $0.name == foodModel.name }) {

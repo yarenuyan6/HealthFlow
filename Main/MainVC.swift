@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MainVCDelegate{
+    func updateWaterIntakeLabel(intakeWater:Int, idealIntakeWater: Int)
+}
+
 class MainVC: UIViewController {
     
     var viewModel: MainVM!
@@ -18,6 +22,8 @@ class MainVC: UIViewController {
     @IBOutlet weak var bmiLabel: UILabel!
     @IBOutlet weak var editHeightWeightStackView: UIStackView!
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var waterIntakeLabel: UILabel!
+    
     let loadingIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(style: .large)
         indicator.translatesAutoresizingMaskIntoConstraints = false
@@ -25,13 +31,12 @@ class MainVC: UIViewController {
         return indicator
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpHeader()
         setUpUI()
         tapGestures()
-    }
+            }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -45,16 +50,18 @@ class MainVC: UIViewController {
         
         viewModel.getUserInfo{ user, error in
             DispatchQueue.main.async {
-                LoadingOverlay.shared.hideOverlayView()
-                
-                        if let user = user {
-                            self.nameLabel.text = user.name
-                            guard let height = user.height , let weight = user.weight else {return}
-                            self.bmiLabel.text = self.viewModel.calculateBMI(height: height, weight: weight)
-                        }
-                        if let error = error {
-                            self.nameLabel.text = error.localizedDescription
-                        }
+                if let user = user {
+                    self.nameLabel.text = user.name
+                    guard let height = user.height , let weight = user.weight else {return}
+                    self.bmiLabel.text = self.viewModel.calculateBMI(height: height, weight: weight)
+                    self.viewModel.waterVM.userModel = self.viewModel.userModel
+                    self.viewModel.waterVM.calculateIdealIntake()
+                    self.getWaterInfo()
+                    LoadingOverlay.shared.hideOverlayView()
+                }
+                if let error = error {
+                    self.nameLabel.text = error.localizedDescription
+                }
             }
         }
     }
@@ -99,6 +106,26 @@ class MainVC: UIViewController {
         let profileTapGesture = UITapGestureRecognizer(target: self, action: #selector(profileImageViewTapped))
         profileImageView.addGestureRecognizer(profileTapGesture)
         profileImageView.isUserInteractionEnabled = true
+        
+        let waterTapGesture =  UITapGestureRecognizer(target: self, action: #selector(waterStackViewTapped))
+        waterStackView.addGestureRecognizer(waterTapGesture)
+        waterStackView.isUserInteractionEnabled = true
+    }
+    
+    private func getWaterInfo(){
+        viewModel.getWaterInfo { [weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let (totalMl, idealIntakeWater)):
+                DispatchQueue.main.async {
+                    self.updateWaterIntakeLabel(intakeWater: totalMl, idealIntakeWater: idealIntakeWater)
+                }
+                
+            case .failure(let error):
+                print("Hata: \(error.localizedDescription)")
+            }
+        }
     }
     
     @objc func foodStackViewTapped(){
@@ -123,20 +150,40 @@ class MainVC: UIViewController {
         self.navigationController?.pushViewController(profileVC, animated: true)
     }
     
+    @objc func waterStackViewTapped(){
+        let waterVC = UIStoryboard (name: "Water", bundle: nil).instantiateViewController(withIdentifier: "WaterVC") as! WaterVC
+        let waterVM = WaterVM()
+        let waterModel = WaterModel()
+        waterVC.viewModel = waterVM
+        waterVM.waterModel = waterModel
+        waterVM.userModel = viewModel.userModel
+        waterVM.mainDelegate = self
+        self.navigationController?.pushViewController(waterVC, animated: true)
+    }
+    
     private func showLoadingIndicator() {
-
+        
         view.addSubview(loadingIndicator)
-
+        
         NSLayoutConstraint.activate([
             loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
-
+        
         loadingIndicator.startAnimating()
     }
-
+    
     private func hideLoadingIndicator() {
         loadingIndicator.removeFromSuperview()
     }
+}
+
+extension MainVC: MainVCDelegate{
+    func updateWaterIntakeLabel(intakeWater: Int, idealIntakeWater: Int) {
+        waterIntakeLabel.text = "\(intakeWater) of \(idealIntakeWater) ml"
+    }
+    
+    
+    
 }
 
