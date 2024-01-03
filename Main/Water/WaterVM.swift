@@ -94,8 +94,16 @@ class WaterVM{
         let db = Firestore.firestore()
         
         let waterEntriesCollectionRef = db.collection("water").document(uid).collection("waterEntries")
+        let currentDate = Date()
+        let startOfDay = Calendar.current.startOfDay(for: currentDate)
+        let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!
         
-        waterEntriesCollectionRef.getDocuments { (querySnapshot, error) in
+        waterEntriesCollectionRef
+            .whereField("date", isGreaterThanOrEqualTo: startOfDay)
+            .whereField("date", isLessThan: endOfDay)
+            .order(by: "date", descending: true)
+            
+            .getDocuments { (querySnapshot, error) in
             if let error = error {
                 completion(.failure(error))
                 return
@@ -263,22 +271,12 @@ class WaterVM{
             }
         }
 
-        // Tüm sorguların bitmesini bekleyin
         dispatchGroup.notify(queue: .main) {
-            // Sonuçları doğru sırayla çıkarmak için günleri sıralayın
             let sortedResults = (0...6).map { resultsDictionary[$0] ?? 0 }
             completion(sortedResults)
         }
     }
-//
-//    func getStartOfWeek() -> Date? {
-//        let currentDate = Date()
-//        var calendar = Calendar.current
-//        calendar.firstWeekday = 2
-//        let today = calendar.startOfDay(for: currentDate)
-//        return calendar.date(byAdding: .day, value: -(calendar.component(.weekday, from: today - 1) - 1), to: today)
-//    }
-    
+
     func addWaterToFirebase(waterMod: WaterModel){
         
         func waterModelToMap(waterModel: WaterModel) -> [String:Any]{
@@ -307,6 +305,8 @@ class WaterVM{
             }
         }
     }
+    
+    
 }
 
 

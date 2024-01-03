@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RedHatDisplay-Medium.otf">
+            <string>RedHatDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Weekly Water IntakeVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="WeeklyWaterIntakeVC" id="Y6W-OH-hqX" customClass="WeeklyWaterIntakeVC" customModule="HealthFlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="LCd-Dd-8sy">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="3LS-zl-7mV">
+                                        <rect key="frame" x="16" y="60" width="361" height="384"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="vq9-eD-jff">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="30"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1" insetsLayoutMarginsFromSafeArea="NO" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wco-XC-fZd">
+                                                        <rect key="frame" x="30" y="0.0" width="331" height="30"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Weekly Water Intake" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Okh-ZY-pIA">
+                                                                <rect key="frame" x="0.0" y="3.6666666666666643" width="301" height="22.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="RedHatDisplay-Medium" family="Red Hat Display" pointSize="17"/>
+                                                                <color key="textColor" name="blackOwn"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="s7q-hT-XHs">
+                                                                <rect key="frame" x="301" y="0.0" width="30" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="30" id="0Ei-5z-uo4"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="VDP-EK-sbm"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Okh-ZY-pIA" firstAttribute="centerX" secondItem="vq9-eD-jff" secondAttribute="centerX" id="drf-uS-cRW"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pt-Lw-25e">
+                                                <rect key="frame" x="0.0" y="60" width="361" height="324"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ALE-lw-eJz">
+                                                        <rect key="frame" x="8" y="8" width="337" height="300"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="300" id="7xr-hD-JQt"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="16" right="16"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="60" left="16" bottom="60" right="16"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LCd-Dd-8sy" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="E6v-LQ-o4W"/>
+                            <constraint firstItem="LCd-Dd-8sy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cUD-sD-7FD"/>
+                            <constraint firstItem="LCd-Dd-8sy" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="nCX-0c-yaY"/>
+                            <constraint firstAttribute="bottom" secondItem="LCd-Dd-8sy" secondAttribute="bottom" id="z26-gH-1aT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chartView" destination="ALE-lw-eJz" id="hYU-Vw-YWe"/>
+                        <outlet property="closeImageView" destination="s7q-hT-XHs" id="3ek-pC-N6a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36" y="5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cross" width="85.333335876464844" height="85.333335876464844"/>
+        <namedColor name="blackOwn">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

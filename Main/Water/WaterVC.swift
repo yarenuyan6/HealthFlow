@@ -8,6 +8,7 @@
 import UIKit
 import Charts
 import DGCharts
+import Firebase
 
 protocol WaterDelegate{
     func updateWaterModelArray()
@@ -23,8 +24,7 @@ class WaterVC: UIViewController {
     @IBOutlet weak var idealWaterIntakeLabel: UILabel!
     @IBOutlet weak var goBackImageView: UIImageView!
     @IBOutlet weak var plusImageView: UIImageView!
-    @IBOutlet weak var chartView: UIView!
-    
+    @IBOutlet weak var weeklyWaterIntakeLabel: UILabel!
     
     var viewModel: WaterVM! {
         didSet{
@@ -36,14 +36,13 @@ class WaterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tapGestures()
-                setUpTableView()
         viewModel.calculateIdealIntake()
         viewModel.waterModel.idealWater = viewModel.idealWaterIntake
         viewModel.getWaterInfo()
         viewModel.getTotalMlFromFirebase { totalMl in
             self.viewModel.totalMl = totalMl
             self.setUpUI()
-            self.setUpBarChart()
+            self.setUpTableView()
         }
     }
     
@@ -53,47 +52,6 @@ class WaterVC: UIViewController {
             waterTableView.register(UINib(nibName: WaterTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: WaterTableViewCell.identifier)
         }
     
-    private func setUpBarChart(){
-        
-        let daysOfWeek = ["S", "M", "T", "W", "T", "F", "S"]
-        let barChartView = BarChartView()
-
-        barChartView.frame = CGRect(x: 0, y: 0, width: self.chartView.frame.size.width, height: self.chartView.frame.size.height)
-        barChartView.center = chartView.center
-        barChartView.xAxis.drawGridLinesEnabled = false
-        barChartView.leftAxis.drawGridLinesEnabled = false
-
-        let xAxis = barChartView.xAxis
-        xAxis.valueFormatter = IndexAxisValueFormatter(values: daysOfWeek)
-        xAxis.labelCount = daysOfWeek.count
-        xAxis.labelPosition = .bottom
-        xAxis.drawGridLinesEnabled = false
-
-        chartView.addSubview(barChartView)
-
-
-        viewModel.getWeeklyTotalMl { sortedResults in
-            var barChartDataEntries: [BarChartDataEntry] = []
-            
-//            for dayIndex in 0...dailyTotalMlValues.count - 1{
-//                let reversedIndex = dailyTotalMlValues.count - dayIndex - 1
-//                let dailyTotalMl = dailyTotalMlValues[reversedIndex]
-//                let entry = BarChartDataEntry(x: Double(dayIndex), y: dailyTotalMl)
-//                barChartDataEntries.append(entry)
-//            }
-
-            for dayIndex in 0...sortedResults.count - 1 {
-                let dailyTotalMl = sortedResults[dayIndex] // Tersine çevirmeyin
-                let entry = BarChartDataEntry(x: Double(dayIndex), y: dailyTotalMl)
-                barChartDataEntries.append(entry)
-            }
-            
-            let dataSet = BarChartDataSet(entries: barChartDataEntries, label: "Daily Total Ml for Week")
-            let data = BarChartData(dataSet: dataSet)
-            barChartView.data = data
-        }
-    }
-    
     private func tapGestures(){
         let goBackTapGesture = UITapGestureRecognizer(target: self, action: #selector(goBackImageViewTapped))
         goBackImageView.addGestureRecognizer(goBackTapGesture)
@@ -102,6 +60,12 @@ class WaterVC: UIViewController {
         let plusImageViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(plusImageViewTapped))
         plusImageView.addGestureRecognizer(plusImageViewTapGesture)
         plusImageView.isUserInteractionEnabled = true
+        
+        let weeklyWaterTaoGesture = UITapGestureRecognizer(target: self, action: #selector(weeklyWaterLabelTapped))
+        weeklyWaterIntakeLabel.addGestureRecognizer(weeklyWaterTaoGesture)
+        weeklyWaterIntakeLabel.isUserInteractionEnabled = true
+        
+        
     }
     
     @objc func goBackImageViewTapped(){
@@ -115,45 +79,70 @@ class WaterVC: UIViewController {
         self.updateWaterModelArray()
     }
     
+    @objc func weeklyWaterLabelTapped(){
+        let weeklyWaterVC = UIStoryboard (name: "WeeklyWaterIntake", bundle: nil).instantiateViewController(withIdentifier: "WeeklyWaterIntakeVC") as! WeeklyWaterIntakeVC
+        weeklyWaterVC.modalPresentationStyle = .overCurrentContext
+        weeklyWaterVC.viewModel = viewModel
+        self.present(weeklyWaterVC, animated: true, completion: nil)
+    }
+    
     func setUpUI(){
         guard let intakeWater = self.viewModel.totalMl else {return}
         waterIntakeLabel.text = "Intake of Water: \(intakeWater) ml"
         
         guard let idealWaterIntake = self.viewModel.idealWaterIntake else {return}
         idealWaterIntakeLabel.text = "Ideal Water Intake: \(Int(idealWaterIntake)) ml"
-        
+
         //        viewModel.mainDelegate?.updateWaterIntakeLabel(intakeWater: String(intakeWater), idealIntakeWater: String(idealWaterIntake))
     }
     
 }
 
 extension WaterVC: UITableViewDataSource, UITableViewDelegate{
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 2
-//        
-//    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.addedWaterArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        1
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
     }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 8
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //       let cell = tableView.dequeueReusableCell(withIdentifier: WaterTableViewCell.identifier, for: indexPath) as! WaterTableViewCell
         let cell = tableView.dequeueReusableCell(withIdentifier: WaterTableViewCell.identifier) as! WaterTableViewCell
-        cell.indexPath = indexPath.row
+        cell.indexPath = indexPath.section
         cell.viewModel = viewModel
-        return cell
+        
+        
+//        cell.deleteButtonAction = { [weak self] in
+//            let itemIndex = indexPath.row
+//            self?.deleteDocumentFromFirebase(at: itemIndex)
+//        }
+//        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 8
+    func deleteDocumentFromFirebase(documentId: String){
+        let db = Firestore.firestore()
+        
+        db.collection("yourCollectionName").document(documentId).delete { error in
+            if let error = error {
+                print("Error removing document: \(error)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
     }
 }
 

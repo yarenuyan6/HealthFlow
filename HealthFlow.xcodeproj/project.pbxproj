@@ -63,6 +63,8 @@
 		AD9B52F92B22762100E832B2 /* AmountAddedFood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9B52F82B22762100E832B2 /* AmountAddedFood.storyboard */; };
 		AD9B52FB2B23503F00E832B2 /* AmountAddedFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9B52FA2B23503F00E832B2 /* AmountAddedFoodVC.swift */; };
 		AD9B52FD2B2364CA00E832B2 /* AmountAddedFoodVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9B52FC2B2364CA00E832B2 /* AmountAddedFoodVM.swift */; };
+		AD9E80672B44411400B24C1C /* WeeklyWaterIntake.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9E80662B44411400B24C1C /* WeeklyWaterIntake.storyboard */; };
+		AD9E80692B4442EF00B24C1C /* WeeklyWaterIntakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E80682B4442EF00B24C1C /* WeeklyWaterIntakeVC.swift */; };
 		ADA256362B0156DB003BB7D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA256352B0156DB003BB7D1 /* AppDelegate.swift */; };
 		ADA256382B0156DB003BB7D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA256372B0156DB003BB7D1 /* SceneDelegate.swift */; };
 		ADA2563A2B0156DB003BB7D1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA256392B0156DB003BB7D1 /* MainVC.swift */; };
@@ -172,6 +174,8 @@
 		AD9B52F82B22762100E832B2 /* AmountAddedFood.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AmountAddedFood.storyboard; sourceTree = "<group>"; };
 		AD9B52FA2B23503F00E832B2 /* AmountAddedFoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountAddedFoodVC.swift; sourceTree = "<group>"; };
 		AD9B52FC2B2364CA00E832B2 /* AmountAddedFoodVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountAddedFoodVM.swift; sourceTree = "<group>"; };
+		AD9E80662B44411400B24C1C /* WeeklyWaterIntake.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeeklyWaterIntake.storyboard; sourceTree = "<group>"; };
+		AD9E80682B4442EF00B24C1C /* WeeklyWaterIntakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWaterIntakeVC.swift; sourceTree = "<group>"; };
 		ADA256322B0156DB003BB7D1 /* HealthFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA256352B0156DB003BB7D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADA256372B0156DB003BB7D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -391,6 +395,7 @@
 		AD8F37AB2B32D6DB00A6F32C /* Water */ = {
 			isa = PBXGroup;
 			children = (
+				AD9E80652B4440F800B24C1C /* WeeklyWaterIntake */,
 				ADBB50FE2B342B7800C3BD79 /* WaterTableViewCell */,
 				AD8F37AC2B32D6F500A6F32C /* Water.storyboard */,
 				AD8F37B02B32E2FC00A6F32C /* WaterVC.swift */,
@@ -408,6 +413,15 @@
 				AD9B52FC2B2364CA00E832B2 /* AmountAddedFoodVM.swift */,
 			);
 			path = AmountAddedFood;
+			sourceTree = "<group>";
+		};
+		AD9E80652B4440F800B24C1C /* WeeklyWaterIntake */ = {
+			isa = PBXGroup;
+			children = (
+				AD9E80662B44411400B24C1C /* WeeklyWaterIntake.storyboard */,
+				AD9E80682B4442EF00B24C1C /* WeeklyWaterIntakeVC.swift */,
+			);
+			path = WeeklyWaterIntake;
 			sourceTree = "<group>";
 		};
 		ADA256292B0156DA003BB7D1 = {
@@ -656,6 +670,7 @@
 				AD51BB442B078AD600C128C5 /* RedHatDisplay-MediumItalic.otf in Resources */,
 				ADA2563F2B0156DC003BB7D1 /* Assets.xcassets in Resources */,
 				AD51BB3D2B078AD600C128C5 /* RedHatDisplay-Regular.otf in Resources */,
+				AD9E80672B44411400B24C1C /* WeeklyWaterIntake.storyboard in Resources */,
 				AD09EC422B1629BD00471E4A /* SelectedFoodTableViewCell.xib in Resources */,
 				AD51BB412B078AD600C128C5 /* RedHatDisplay-Italic.otf in Resources */,
 				AD0C98912B0249D900CB923D /* Onboarding.storyboard in Resources */,
@@ -699,6 +714,7 @@
 				ADB8CAA72B09020A00EC9039 /* UserModel.swift in Sources */,
 				AD09EC3D2B14A88D00471E4A /* LoginModel.swift in Sources */,
 				AD819D772B1DAEE4000CD5F3 /* AddFoodVC.swift in Sources */,
+				AD9E80692B4442EF00B24C1C /* WeeklyWaterIntakeVC.swift in Sources */,
 				ADDF3A0D2B2D476300F3D7F8 /* ProfileVM.swift in Sources */,
 				AD9B52FD2B2364CA00E832B2 /* AmountAddedFoodVM.swift in Sources */,
 				ADB8CAA92B0903DF00EC9039 /* RegisterVM.swift in Sources */,
