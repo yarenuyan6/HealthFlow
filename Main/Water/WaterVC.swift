@@ -11,7 +11,7 @@ import DGCharts
 import Firebase
 
 protocol WaterDelegate{
-    func updateWaterModelArray()
+    func updateUI()
     func setUpProgressView()
 }
 
@@ -74,9 +74,9 @@ class WaterVC: UIViewController {
     
     @objc func plusImageViewTapped(){
         guard let waterMl = Int(waterTextField.text ?? "") else {return}
-        viewModel.setWaterModel(ml: waterMl)
+        viewModel.setWaterModelForAdd(ml: waterMl)
         viewModel.addWaterToFirebase(waterMod: viewModel.waterModel)
-        self.updateWaterModelArray()
+        self.updateUI()
     }
     
     @objc func weeklyWaterLabelTapped(){
@@ -92,8 +92,6 @@ class WaterVC: UIViewController {
         
         guard let idealWaterIntake = self.viewModel.idealWaterIntake else {return}
         idealWaterIntakeLabel.text = "Ideal Water Intake: \(Int(idealWaterIntake)) ml"
-
-        //        viewModel.mainDelegate?.updateWaterIntakeLabel(intakeWater: String(intakeWater), idealIntakeWater: String(idealWaterIntake))
     }
     
 }
@@ -116,38 +114,24 @@ extension WaterVC: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//       let cell = tableView.dequeueReusableCell(withIdentifier: WaterTableViewCell.identifier, for: indexPath) as! WaterTableViewCell
         let cell = tableView.dequeueReusableCell(withIdentifier: WaterTableViewCell.identifier) as! WaterTableViewCell
+
+        
         cell.indexPath = indexPath.section
         cell.viewModel = viewModel
+        cell.documentIdArray = viewModel.documentIdArray
+        cell.delegate = self
         
-        
-//        cell.deleteButtonAction = { [weak self] in
-//            let itemIndex = indexPath.row
-//            self?.deleteDocumentFromFirebase(at: itemIndex)
-//        }
-//        return cell
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
-    func deleteDocumentFromFirebase(documentId: String){
-        let db = Firestore.firestore()
-        
-        db.collection("yourCollectionName").document(documentId).delete { error in
-            if let error = error {
-                print("Error removing document: \(error)")
-            } else {
-                print("Document successfully removed!")
-            }
-        }
-    }
 }
 
 extension WaterVC: WaterDelegate{
-    func updateWaterModelArray(){
+    func updateUI(){
         setUpUI()
         self.waterTableView.reloadData()
     }

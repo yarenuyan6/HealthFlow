@@ -35,6 +35,7 @@ class WaterVM{
 //    }
     var userModel: UserModel?
     var mainDelegate: MainVCDelegate?
+    var documentIdArray: [String] = []
     
     func formattedTime() -> String {
         guard let date = waterModel.date else {return ""}
@@ -43,21 +44,13 @@ class WaterVM{
         return timeFormatter.string(from: date)
     }
     
-    //    func formattedDate() -> String{
-    //        guard let day = waterModel.day else {return ""}
-    //        let dateFormatter = DateFormatter()
-    //        dateFormatter.dateFormat = "yyyy-MM-dd"
-    //        return dateFormatter.string(from: day)
-    //    }
-    
-    func setWaterModel(ml: Int){
+    func setWaterModelForAdd(ml: Int){
         self.addedMl = ml
         self.totalMl += self.addedMl
         
         let currentDate = Date()
         waterModel.date = currentDate
     }
-    
     
     func calculateProgress() -> Double{
         var totalWater: Double = 0
@@ -78,17 +71,23 @@ class WaterVM{
     
     //MARK: Firebase Logic
     func getWaterInfo(){
+        clearWaterData()
         getAddedWaterInfo { [weak self] res in
             switch res{
-            case .success(let waterArray):
-                self?.addedWaterArray = waterArray
+            case .success(let result):
+                self?.addedWaterArray = result.waterArray
+                self?.documentIdArray = result.idArray
+                self?.waterDelegate?.updateUI()
+                self?.waterDelegate?.setUpProgressView()
             case .failure(let error):
                 print(error)
             }
         }
     }
+    
+    
 
-    func getAddedWaterInfo(completion: @escaping (Result<[WaterModel], Error>) -> Void){
+    func getAddedWaterInfo(completion: @escaping (Result<(waterArray: [WaterModel], idArray: [String]), Error>) -> Void){
         guard let user = Auth.auth().currentUser else { return }
         let uid = user.uid
         let db = Firestore.firestore()
@@ -109,14 +108,16 @@ class WaterVM{
                 return
             }
             
-            for document in querySnapshot!.documents {
-                print("Belge Verileri: \(document.data())")
-                let water = WaterModel(data: document.data())
-                self.addedWaterArray.append(water)
+                for document in querySnapshot!.documents {
+                    let water = WaterModel(data: document.data())
+                    self.addedWaterArray.append(water)
+                    self.documentIdArray.append(document.documentID)
+                    print(document.documentID)
+                }
+                
+                    let result = (waterArray: self.addedWaterArray, idArray: self.documentIdArray)
+                    completion(.success(result))
             }
-            
-            completion(.success(self.addedWaterArray))
-        }
     }
     
     func getTotalMlFromFirebase(completion: @escaping (Int) -> Void) {
@@ -160,58 +161,6 @@ class WaterVM{
                 }
             }
     }
-    
-//    func getWeeklyTotalMl(completion: @escaping ([Double]) -> Void) {
-//        guard let user = Auth.auth().currentUser else { return }
-//        let uid = user.uid
-//        let db = Firestore.firestore()
-//
-//        let waterEntriesCollectionRef = db.collection("water").document(uid).collection("waterEntries")
-//
-////        guard let startOfWeek = getStartOfWeek() else {return}
-//        let currentDate = Date()
-//        var calendar = Calendar.current
-//        calendar.firstWeekday = 2
-//        let today = calendar.startOfDay(for: currentDate)
-//        let localDate = calendar.date(byAdding: .second, value: TimeZone.current.secondsFromGMT(), to: today)!
-//
-//        guard let startOfWeek = calendar.date(byAdding: .day, value: -(calendar.component(.weekday, from: localDate)), to: localDate) else {return}
-//        let endOfWeek = calendar.date(byAdding: .day, value: 6, to: startOfWeek)!
-//
-//        var weeklyTotalMlValues: [Double] = []
-//        let dispatchGroup = DispatchGroup()
-//
-//        for day in 0...6 {
-//            let currentDate = calendar.date(byAdding: .day, value: day, to: startOfWeek) ?? localDate
-//            let endOfDay = calendar.date(bySettingHour: 23, minute: 59, second: 59, of: currentDate)!
-//
-//            dispatchGroup.enter()
-//
-//            waterEntriesCollectionRef
-//                .whereField("date", isGreaterThanOrEqualTo: currentDate)
-//                .whereField("date", isLessThanOrEqualTo: endOfDay)
-//                .order(by: "date", descending: true)
-//                .limit(to: 1)
-//                .getDocuments { (querySnapshot, error) in
-//
-//                    if let document = querySnapshot?.documents.first,
-//                        let dailyTotalMl = document.data()["totalMl"] as? Double {
-//                        weeklyTotalMlValues.append(dailyTotalMl)
-//
-//                        print("Gün: \(day), Toplam Su Miktarı: \(dailyTotalMl) ml")
-//
-//                    } else {
-//                        weeklyTotalMlValues.append(0)
-//                    }
-//
-//                    dispatchGroup.leave()
-//                }
-//        }
-//
-//        dispatchGroup.notify(queue: .main) {
-//            completion(weeklyTotalMlValues)
-//        }
-//    }
     
     func getWeeklyTotalMl(completion: @escaping ([Double]) -> Void) {
         guard let user = Auth.auth().currentUser else { return }
@@ -259,7 +208,7 @@ class WaterVM{
 
                         if let document = querySnapshot?.documents.first,
                             let dailyTotalMl = document.data()["totalMl"] as? Double {
-                            resultsDictionary[day] = dailyTotalMl  // Sözlüğe ekleyin
+                            resultsDictionary[day] = dailyTotalMl
 
                             print("Gün: \(day), Toplam Su Miktarı: \(dailyTotalMl) ml")
 
@@ -300,13 +249,18 @@ class WaterVM{
                 } else {
                     print("Doküman oluşturuldu!")
                     self.getWaterInfo()
-                    self.waterDelegate.updateWaterModelArray()
+                    self.waterDelegate.updateUI()
                 }
             }
         }
     }
     
-    
+    func clearWaterData() {
+        addedWaterArray.removeAll()
+        documentIdArray.removeAll()
+        waterDelegate?.updateUI()
+        waterDelegate?.setUpProgressView()
+    }
 }
 
 

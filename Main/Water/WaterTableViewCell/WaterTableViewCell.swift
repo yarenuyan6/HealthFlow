@@ -16,7 +16,8 @@ class WaterTableViewCell: UITableViewCell {
         }
     }
     var indexPath: Int?
-    var deleteButtonAction: (() -> Void)?
+    var delegate: WaterDelegate?
+    var documentIdArray: [String]?
     @IBOutlet weak var millilitreLabel: UILabel!
     @IBOutlet weak var hourLabel: UILabel!
     static let identifier = "WaterTableViewCell"
@@ -53,23 +54,79 @@ class WaterTableViewCell: UITableViewCell {
     }
     
     @objc func deleteImageViewTapped(){
-        deleteButtonAction?()
-        
         guard let indexPath = indexPath else {return}
-        let selectedData = viewModel.addedWaterArray[indexPath]
-
+        guard let selectedDataId = documentIdArray?[indexPath] else {
+            print("Error: Selected documentId is nil.")
+            return
+        }
+        self.deleteDocumentFromFirebase(documentId: selectedDataId)
+        viewModel.addedWaterArray.remove(at: indexPath)
+        delegate?.setUpProgressView()
+        viewModel.getTotalMlFromFirebase { totalMl in
+            self.viewModel.totalMl = totalMl
+        }
     }
     
     func deleteDocumentFromFirebase(documentId: String){
-        let db = Firestore.firestore()
+        guard let indexPath = indexPath else {return}
+        let deletedMl = self.viewModel.addedWaterArray[indexPath].millilitre
         
-        db.collection("yourCollectionName").document(documentId).delete { error in
+        guard let user = Auth.auth().currentUser else { return }
+        let uid = user.uid
+        let db = Firestore.firestore()
+        let documentRef =   db.collection("water").document(uid).collection("waterEntries").document(documentId)
+        
+        documentRef.delete { error in
             if let error = error {
                 print("Error removing document: \(error)")
             } else {
-                print("Document successfully removed!")
+                self.updateTotalMlAfterDelete(ml: deletedMl)
+                self.delegate?.updateUI()
+                self.delegate?.setUpProgressView()
+            }
+        }
+    }
+    
+    func setTotalMlForDelete(ml: Int) -> Int {
+        let updatedTotalMl = viewModel.totalMl - ml
+        viewModel.totalMl = updatedTotalMl
+        return updatedTotalMl
+    }
+    
+    func updateTotalMlAfterDelete(ml: Int) {
+        guard let user = Auth.auth().currentUser else { return }
+        let uid = user.uid
+        let db = Firestore.firestore()
+        
+        
+        db.collection("water").document(uid).collection("waterEntries").getDocuments { (querySnapshot, error) in
+            guard let documents = querySnapshot?.documents else {
+                print("Error fetching documents: \(error)")
+                return
+            }
+            
+            for document in documents {
+                do {
+                    let documentID = document.documentID
+                    let totalMl = document.data()["totalMl"] as? Int ?? 0
+                    
+                    let documentRef = db.collection("water").document(uid).collection("waterEntries").document(documentID)
+                    documentRef.updateData([
+                        "totalMl": self.setTotalMlForDelete(ml:ml)
+                    ]) { error in
+                        if let error = error {
+                            print("Error updating document: \(error)")
+                        } else {
+                            print("Document successfully updated!")
+                            self.delegate?.updateUI()
+                        }
+                    }
+                } catch {
+                    print("Error parsing document: \(error)")
+                }
             }
         }
     }
 }
+
 
